@@ -1,0 +1,29 @@
+<style>
+#tf-support-panel .description + h3 {
+    margin-top: 20px;
+}
+
+#tf-log {
+    margin: 10px 0;
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 3px;
+    opacity: 0.6;
+    white-space: pre;
+}
+</style>
+<div id="tf-support-panel">
+<h3>Log</h3>
+<div id="tf-log">
+<?php echo TwitterFeed\Logger::get_instance()->get_formatted_log(); ?>
+</div>
+<p class="description">The plugin's execution log</p>
+<h3>Cached Data</h3>
+<div id="tf-log">
+<?php print_r(TwitterFeed\Parser\Cache::get_instance()->data()); ?>
+</div>
+<p class="description">The list of tweets currently stored in local cache (applicable only if caching is set to ON)</p>
+</div>

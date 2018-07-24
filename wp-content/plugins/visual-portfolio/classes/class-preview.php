@@ -22,6 +22,13 @@ class Visual_Portfolio_Preview {
     public $preview_enabled = false;
 
     /**
+     * Preview portfolio page id.
+     *
+     * @var int|bool
+     */
+    public $preview_id = false;
+
+    /**
      * Visual_Portfolio_Preview constructor.
      */
     public function __construct() {
@@ -32,25 +39,37 @@ class Visual_Portfolio_Preview {
      * Hooks.
      */
     public function init_hooks() {
-        add_filter( 'query_vars', array( $this, 'add_wp_var' ) );
+        add_action( 'init', array( $this, 'is_preview_check' ) );
         add_filter( 'pre_handle_404', array( $this, 'pre_handle_404' ) );
-        add_filter( 'vp_get_option', array( $this, 'filter_preview_option' ), 10, 2 );
+        add_filter( 'vpf_get_layout_option', array( $this, 'filter_preview_option' ), 10, 2 );
         add_action( 'init', array( $this, 'flush_rules_preview_frame' ) );
         add_action( 'template_redirect', array( $this, 'template_redirect' ) );
     }
 
     /**
-     * Register custom query vars
-     *
-     * @param array $public_query_vars - query vars.
-     *
-     * @return array
+     * Check if the page is preview.
      */
-    public static function add_wp_var( $public_query_vars ) {
-        $public_query_vars[] = 'vp_preview';
-        $public_query_vars[] = 'vp_preview_frame';
-        $public_query_vars[] = 'vp_preview_frame_id';
-        return $public_query_vars;
+    public function is_preview_check() {
+        // phpcs:disable
+        $frame = isset( $_GET['vp_preview_frame'] ) ? esc_attr( wp_unslash( $_GET['vp_preview_frame'] ) ) : false;
+        $id = isset( $_GET['vp_preview_frame_id'] ) ? esc_attr( wp_unslash( $_GET['vp_preview_frame_id'] ) ) : false;
+        // phpcs:enable
+
+        $this->preview_enabled = 'true' === $frame && $id;
+        if ( $this->preview_enabled ) {
+            // check if the user can view vp_lists page.
+            if ( ! current_user_can( 'read_portfolio', $id ) ) {
+                $this->preview_enabled = false;
+                return;
+            }
+
+            $this->preview_id = $id;
+
+            // Tell WP Super Cache & W3 Total Cache to not cache WPReadable requests.
+            if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+                define( 'DONOTCACHEPAGE', true );
+            }
+        }
     }
 
     /**
@@ -60,12 +79,8 @@ class Visual_Portfolio_Preview {
      *
      * @return bool
      */
-    public static function pre_handle_404( $val ) {
-        $frame = get_query_var( 'vp_preview_frame' );
-        $id = get_query_var( 'vp_preview_frame_id' );
-        $pagename = get_query_var( 'vp_preview' );
-
-        if ( 'vp_preview' === $pagename && 'true' === $frame && $id ) {
+    public function pre_handle_404( $val ) {
+        if ( $this->preview_enabled ) {
             $val = true;
         }
         return $val;
@@ -76,10 +91,11 @@ class Visual_Portfolio_Preview {
      *
      * @param mixed  $val - value of the option.
      * @param string $name - name of the option.
+     * @return mixed
      */
     public function filter_preview_option( $val, $name ) {
         if ( $this->preview_enabled ) {
-            // @codingStandardsIgnoreStart
+	        // phpcs:disable
             if ( isset( $_POST[ $name ] ) ) {
                 if ( is_array( $_POST[ $name ] ) ) {
                     $val = array_map( 'sanitize_text_field', wp_unslash( $_POST[ $name ] ) );
@@ -89,7 +105,12 @@ class Visual_Portfolio_Preview {
                     $val = sanitize_text_field( wp_unslash( $_POST[ $name ] ) );
                 }
             }
-            // @codingStandardsIgnoreEnd
+	        // phpcs:enable
+
+            // disable infinite loading in preview.
+            if ( 'vp_pagination' === $name && 'infinite' === $val ) {
+                $val = 'load-more';
+            }
         }
 
         return $val;
@@ -120,12 +141,8 @@ class Visual_Portfolio_Preview {
      * SITE/vp_preview/?vp_preview_frame=true&vp_preview_frame_id=10
      */
     public function template_redirect() {
-        $frame = get_query_var( 'vp_preview_frame' );
-        $id = get_query_var( 'vp_preview_frame_id' );
-        $pagename = get_query_var( 'vp_preview' );
-
-        if ( 'vp_preview' === $pagename && 'true' === $frame && $id ) {
-            $this->print_template( $id );
+        if ( $this->preview_enabled ) {
+            $this->print_template( $this->preview_id );
             exit;
         }
     }
@@ -136,9 +153,8 @@ class Visual_Portfolio_Preview {
      * @param int $id - visual portfolio shortcode id.
      */
     public function print_template( $id ) {
-        $this->preview_enabled = true;
-        wp_enqueue_script( 'iframe-resizer-content', visual_portfolio()->plugin_url . 'assets/vendor/iframe-resizer/iframeResizer.contentWindow.min.js', '', '', true );
-        wp_enqueue_script( 'visual-portfolio-preview', visual_portfolio()->plugin_url . 'assets/js/script-preview.js', array( 'jquery' ), '', true );
+        wp_enqueue_script( 'iframe-resizer-content', visual_portfolio()->plugin_url . 'assets/vendor/iframe-resizer/iframeResizer.contentWindow.min.js', '', '3.6.1', true );
+        wp_enqueue_script( 'visual-portfolio-preview', visual_portfolio()->plugin_url . 'assets/js/script-preview.min.js', array( 'jquery' ), '', true );
         ?>
         <!DOCTYPE html>
         <html <?php language_attributes(); ?> style="margin-top: 0 !important;">
@@ -160,7 +176,7 @@ class Visual_Portfolio_Preview {
                         content: none !important;
                     }
                     #wpadminbar {
-                        display: none; <?php // @codingStandardsIgnoreLine ?>
+                        display: none; <?php // phpcs:ignore ?>
                     }
                     #vp_preview {
                         position: relative;
@@ -176,7 +192,7 @@ class Visual_Portfolio_Preview {
             <body>
                 <div id="vp_preview">
                     <?php
-                        // @codingStandardsIgnoreLine
+                        // phpcs:ignore
                         echo Visual_Portfolio_Get::get( array( 'id' => $id ) );
                     ?>
                 </div>

@@ -1,0 +1,403 @@
+[
+    {
+        "name": "j7mbo/twitter-api-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/J7mbo/twitter-api-php.git",
+            "reference": "f1a84c8c39a854ac7a8bc87e59c997b526c7bbc7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/J7mbo/twitter-api-php/zipball/f1a84c8c39a854ac7a8bc87e59c997b526c7bbc7",
+            "reference": "f1a84c8c39a854ac7a8bc87e59c997b526c7bbc7",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.5,>=4.5.1"
+        },
+        "time": "2017-05-08 16:51:49",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "TwitterAPIExchange.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GNU Public License"
+        ],
+        "authors": [
+            {
+                "name": "James Mallison",
+                "homepage": "https://github.com/j7mbo/twitter-api-php"
+            }
+        ],
+        "description": "Simple PHP Wrapper for Twitter API v1.1 calls",
+        "homepage": "https://github.com/j7mbo/twitter-api-php",
+        "keywords": [
+            "api",
+            "php",
+            "twitter"
+        ]
+    },
+    {
+        "name": "yahnis-elsts/plugin-update-checker",
+        "version": "v4.4",
+        "version_normalized": "4.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
+            "reference": "da4286343601e1f5c01836e1d51e1c57cedb0f6d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/da4286343601e1f5c01836e1d51e1c57cedb0f6d",
+            "reference": "da4286343601e1f5c01836e1d51e1c57cedb0f6d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "time": "2017-12-22 10:39:11",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "plugin-update-checker.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Yahnis Elsts",
+                "email": "whiteshadow@w-shadow.com",
+                "homepage": "http://w-shadow.com/",
+                "role": "Developer"
+            }
+        ],
+        "description": "A custom update checker for WordPress plugins and themes. Useful if you can't host your plugin in the official WP repository but still want it to support automatic updates.",
+        "homepage": "https://github.com/YahnisElsts/plugin-update-checker/",
+        "keywords": [
+            "automatic updates",
+            "plugin updates",
+            "theme updates",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "askupa-software/amarkal-admin-notification",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/amarkal/amarkal-admin-notification.git",
+            "reference": "c8869f12628a9a57dbc972de64a5f6e0e4cc9fed"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/amarkal/amarkal-admin-notification/zipball/c8869f12628a9a57dbc972de64a5f6e0e4cc9fed",
+            "reference": "c8869f12628a9a57dbc972de64a5f6e0e4cc9fed",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-12-24 21:40:31",
+        "type": "wordpress",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Amarkal\\Admin\\": ""
+            },
+            "files": [
+                "composer.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Askupa Software",
+                "email": "hello@askupasoftware.com"
+            }
+        ],
+        "description": "Add static/dismissible admin notifications to WordPress",
+        "homepage": "https://github.com/amarkal/amarkal-admin-notification",
+        "keywords": [
+            "framework",
+            "notices",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "askupa-software/amarkal-core",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/amarkal/amarkal-core.git",
+            "reference": "92062bc95fd9fef20a43a0bc3d35f50a4ac558d3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/amarkal/amarkal-core/zipball/92062bc95fd9fef20a43a0bc3d35f50a4ac558d3",
+            "reference": "92062bc95fd9fef20a43a0bc3d35f50a4ac558d3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-12-24 22:05:26",
+        "type": "wordpress",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Amarkal\\Core\\": ""
+            },
+            "files": [
+                "composer.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Askupa Software",
+                "email": "hello@askupasoftware.com"
+            }
+        ],
+        "description": "The core module of the Amarkal framework.",
+        "homepage": "https://github.com/amarkal/amarkal-core",
+        "keywords": [
+            "admin",
+            "amarkal",
+            "framework",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "askupa-software/amarkal-widget",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/amarkal/amarkal-widget.git",
+            "reference": "26f8b09688b22ff56eb6f4f9bca4f962a019b88b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/amarkal/amarkal-widget/zipball/26f8b09688b22ff56eb6f4f9bca4f962a019b88b",
+            "reference": "26f8b09688b22ff56eb6f4f9bca4f962a019b88b",
+            "shasum": ""
+        },
+        "require": {
+            "askupa-software/amarkal-core": "dev-master",
+            "askupa-software/amarkal-ui": "dev-master",
+            "php": ">=5.3.0"
+        },
+        "time": "2017-12-25 21:29:18",
+        "type": "wordpress",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Amarkal\\Widget\\": ""
+            },
+            "files": [
+                "composer.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Askupa Software",
+                "email": "hello@askupasoftware.com"
+            }
+        ],
+        "description": "Develop WordPress widgets based on Amarkal UI",
+        "homepage": "https://github.com/amarkal/amarkal-widget",
+        "keywords": [
+            "admin",
+            "form",
+            "ui",
+            "user interface",
+            "widget",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "askupa-software/amarkal-settings",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/amarkal/amarkal-settings.git",
+            "reference": "341ab0f77bba4f5dfa7fd5a13dde0ae5dd4e21b3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/amarkal/amarkal-settings/zipball/341ab0f77bba4f5dfa7fd5a13dde0ae5dd4e21b3",
+            "reference": "341ab0f77bba4f5dfa7fd5a13dde0ae5dd4e21b3",
+            "shasum": ""
+        },
+        "require": {
+            "askupa-software/amarkal-core": "dev-master",
+            "askupa-software/amarkal-ui": "dev-master",
+            "php": ">=5.3.0"
+        },
+        "time": "2017-12-25 21:13:48",
+        "type": "wordpress",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Amarkal\\Settings\\": ""
+            },
+            "files": [
+                "composer.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Askupa Software",
+                "email": "hello@askupasoftware.com"
+            }
+        ],
+        "description": "Add setting pages with Amarkal UI components to your WordPress theme or plugin",
+        "homepage": "https://github.com/amarkal/amarkal-settings",
+        "keywords": [
+            "Settings",
+            "admin",
+            "form",
+            "options",
+            "ui",
+            "user interface",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "askupa-software/amarkal-shortcode",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/amarkal/amarkal-shortcode.git",
+            "reference": "0523f13312d5433f7b70ca0faf0e78203739e82e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/amarkal/amarkal-shortcode/zipball/0523f13312d5433f7b70ca0faf0e78203739e82e",
+            "reference": "0523f13312d5433f7b70ca0faf0e78203739e82e",
+            "shasum": ""
+        },
+        "require": {
+            "askupa-software/amarkal-core": "dev-master",
+            "askupa-software/amarkal-ui": "dev-master",
+            "php": ">=5.3.0"
+        },
+        "time": "2017-12-31 21:56:57",
+        "type": "wordpress",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Amarkal\\Shortcode\\": ""
+            },
+            "files": [
+                "composer.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Askupa Software",
+                "email": "hello@askupasoftware.com"
+            }
+        ],
+        "description": "A shortcode engine that integrates into WordPress' WYSIWYG editor",
+        "homepage": "https://github.com/amarkal/amarkal-shortcode",
+        "keywords": [
+            "admin",
+            "form",
+            "shortcode",
+            "ui",
+            "user interface",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "askupa-software/amarkal-ui",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/amarkal/amarkal-ui.git",
+            "reference": "651140945353cf8e480329540dd16a58387a1d34"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/amarkal/amarkal-ui/zipball/651140945353cf8e480329540dd16a58387a1d34",
+            "reference": "651140945353cf8e480329540dd16a58387a1d34",
+            "shasum": ""
+        },
+        "require": {
+            "askupa-software/amarkal-core": "dev-master",
+            "php": ">=5.3.0"
+        },
+        "time": "2017-12-31 21:58:41",
+        "type": "wordpress",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Amarkal\\UI\\": ""
+            },
+            "files": [
+                "composer.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Askupa Software",
+                "email": "hello@askupasoftware.com"
+            }
+        ],
+        "description": "A set of UI components for WordPress",
+        "homepage": "https://github.com/amarkal/amarkal-ui",
+        "keywords": [
+            "admin",
+            "form",
+            "ui",
+            "user interface",
+            "wordpress"
+        ]
+    }
+]

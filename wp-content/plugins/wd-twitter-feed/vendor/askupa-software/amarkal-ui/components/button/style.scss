@@ -1,0 +1,64 @@
+@import 'mixins';
+@import 'variables';
+
+.amarkal-ui-component-button {
+    
+    &.amarkal-ui-disabled button {
+        opacity: $disabled-component-opacity;
+        cursor: not-allowed;
+        background-color: $color-medium-gray;
+
+        &:hover {
+            opacity: $disabled-component-opacity;
+        }
+    }
+    
+    button {
+        background-color: $color-blue;
+        color: white;
+        padding: .5em .7em .6em;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        transition: all .15s ease-out;
+        overflow: hidden;
+
+        &:hover {
+            opacity: .8;
+        }
+
+        &.amarkal-ui-doing::before {
+            left: 0%;
+        }
+
+        &.amarkal-ui-done {
+            background-color: $color-green;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &.amarkal-ui-error {
+            background-color: #dc2525;
+
+            &::before {
+                display: none;
+            }
+        }
+        
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            transition-duration: 5s;
+        }
+    }
+}

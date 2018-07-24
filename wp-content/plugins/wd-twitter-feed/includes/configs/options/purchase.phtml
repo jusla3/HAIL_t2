@@ -1,0 +1,160 @@
+<style>
+	.pricing-tables {
+		display: flex;
+		justify-content: space-between;
+		margin: 50px 10px;
+	}
+
+	.pricing-table {
+		width: 250px;
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.15);
+	}
+
+	.pricing-table.featured {
+		transform: scale(1.05) translateY(5px);
+	}
+
+	.pricing-table header {
+		background-color: #0073aa;
+		color: white;
+		padding: 2em 40px;
+	}
+
+	.pricing-table header .title {
+		font-size: 1.2em;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 100;
+	}
+
+	.pricing-table header .price {
+		font-size: 3em;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 1.5em;
+		border-top: 2px solid rgba(255, 255, 255, 0.2);
+		margin-top: .3em;
+	}
+
+	.pricing-table header .price span {
+		font-size: .6em;
+		vertical-align: top;
+		opacity: .8;
+		width: 0;
+		display: inline-block;
+		transform: translateX(-.8em);
+		font-weight: 100;
+	}
+
+	.pricing-table .dashicons {
+		background-color: #0073aa;
+		color: white;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		margin: -25px auto 0;
+		border: 2px solid white;
+		border-radius: 50%;
+	}
+
+	.pricing-table .body {
+	    flex: 1;
+	}
+
+	.pricing-table .item {
+		text-align: center;
+		margin: .6em 40px;
+		border-bottom: 2px solid rgb(241, 241, 241);
+		padding-bottom: .6em;
+	}
+
+	.pricing-table .item:last-child {
+		border-bottom: none;
+	}
+
+	.pricing-table footer {
+		text-align: center;
+    	padding: 1.5em 0;
+	}
+
+	.pricing-table footer .action {
+		display: inline-block;
+		padding: .5em;
+		background-color: #0073aa;
+		color: white;
+		text-transform: uppercase;
+		width: 70%;
+		cursor: pointer;
+		text-decoration: none;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	}
+
+	.pricing-table footer .action:hover {
+		background-color: #00608e;
+	}
+
+	.pricing-table footer .action.disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+</style>
+<div class="pricing-tables">
+	<div class="pricing-table">
+		<header>
+			<div class="title">basic</div>
+			<div class="price">free</div>
+		</header>
+		<div class="dashicons dashicons-arrow-down-alt"></div>
+		<div class="body">
+			<div class="item">1 shortcode type</div>
+			<div class="item">1 widget type</div>
+			<div class="item">1 Twitter resource type</div>
+			<div class="item">2 skins</div>
+			<div class="item">20 tweets per request</div>
+		</div>
+		<footer>
+			<a class="action disabled">installed</a>
+		</footer>
+	</div>
+	<div class="pricing-table featured">
+		<header>
+			<div class="title">advanced</div>
+			<div class="price"><span>$</span>15</div>
+		</header>
+		<div class="dashicons dashicons-arrow-down-alt"></div>
+		<div class="body">
+			<div class="item">3 shortcode type</div>
+			<div class="item">3 widget type</div>
+			<div class="item">8 Twitter resource type</div>
+			<div class="item">5 skins</div>
+			<div class="item">800 tweets per request</div>
+			<div class="item">"Load More" button</div>
+		</div>
+		<footer>
+			<a class="action" href="http://codecanyon.net/item/twitter-feed-social-plugin-for-wordpress/6665168?ref=Askupa" target="_blank">buy now</a>
+		</footer>
+	</div>
+	<div class="pricing-table">
+		<header>
+			<div class="title">extended</div>
+			<div class="price"><span>$</span>75</div>
+		</header>
+		<div class="dashicons dashicons-arrow-down-alt"></div>
+		<div class="body">
+			<div class="item">3 shortcode type</div>
+			<div class="item">3 widget type</div>
+			<div class="item">8 Twitter resource type</div>
+			<div class="item">5 skins</div>
+			<div class="item">800 tweets per request</div>
+			<div class="item">"Load More" button</div>
+			<div class="item">Extended license</div>
+		</div>
+		<footer>
+			<a class="action" href="http://codecanyon.net/item/twitter-feed-social-plugin-for-wordpress/6665168?ref=Askupa" target="_blank">buy now</a>
+		</footer>
+	</div>
+</div>

@@ -1,0 +1,230 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Jquery news ticker\n"
+"POT-Creation-Date: 2015-12-01 22:32+0800\n"
+"PO-Revision-Date: 2015-12-01 22:32+0800\n"
+"Last-Translator: \n"
+"Language-Team: www.gopiplus.com\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../jquery-news-ticker.php:212 ../jquery-news-ticker.php:235
+#: ../jquery-news-ticker.php:236 ../pages/content-management-add.php:117
+#: ../pages/content-management-edit.php:140
+#: ../pages/content-management-show.php:48
+msgid "Jquery news ticker"
+msgstr "JQuery News Ticker"
+
+#: ../jquery-news-ticker.php:301
+msgid "Widget title"
+msgstr "Tytuł widgetu"
+
+#: ../jquery-news-ticker.php:305
+msgid "News prefix text"
+msgstr "Tekst Aktualności prefiksu"
+
+#: ../jquery-news-ticker.php:309
+msgid "Direction"
+msgstr "Kierunek"
+
+#: ../jquery-news-ticker.php:316
+msgid "Display type"
+msgstr "﻿Typ wyświetlania"
+
+#: ../jquery-news-ticker.php:323
+msgid "Pause time (Only number)"
+msgstr "Czas przerwy (tylko numer)"
+
+#: ../jquery-news-ticker.php:327 ../pages/content-management-add.php:140
+#: ../pages/content-management-edit.php:163
+#: ../pages/content-management-show.php:62
+#: ../pages/content-management-show.php:71
+msgid "Group"
+msgstr "Miasto"
+
+#: ../jquery-news-ticker.php:344 ../pages/content-management-add.php:172
+#: ../pages/content-management-edit.php:195
+#: ../pages/content-management-show.php:126
+msgid "Check official website for more information"
+msgstr "Sprawdzić oficjalną stronę internetową, aby uzyskać więcej informacji"
+
+#: ../jquery-news-ticker.php:345 ../pages/content-management-add.php:173
+#: ../pages/content-management-edit.php:196
+#: ../pages/content-management-show.php:127
+msgid "click here"
+msgstr "kliknij tutaj"
+
+#: ../pages/content-management-add.php:30
+#: ../pages/content-management-add.php:123
+#: ../pages/content-management-edit.php:59
+#: ../pages/content-management-edit.php:146
+msgid "Please enter your ticker news."
+msgstr "Podaj link Opt-In."
+
+#: ../pages/content-management-add.php:37
+#: ../pages/content-management-add.php:127
+#: ../pages/content-management-edit.php:66
+#: ../pages/content-management-edit.php:150
+msgid "Please enter your link."
+msgstr "Wprowadź swój"
+
+#: ../pages/content-management-add.php:44
+#: ../pages/content-management-add.php:131
+#: ../pages/content-management-edit.php:73
+#: ../pages/content-management-edit.php:154
+msgid "Please enter your display order."
+msgstr "Proszę wprowadzić swoją kolejność wyświetlania."
+
+#: ../pages/content-management-add.php:51
+#: ../pages/content-management-add.php:138
+#: ../pages/content-management-edit.php:80
+#: ../pages/content-management-edit.php:161
+msgid "Please select your display status."
+msgstr "Proszę wybrać swój stan wyświetlacza."
+
+#: ../pages/content-management-add.php:58
+#: ../pages/content-management-add.php:154
+#: ../pages/content-management-edit.php:87
+#: ../pages/content-management-edit.php:177
+msgid "Please select available group for your news."
+msgstr "Proszę wybrać dostępną grupę do wiadomości."
+
+#: ../pages/content-management-add.php:65
+#: ../pages/content-management-edit.php:94
+msgid "Please enter the expiration date in this format YYYY-MM-DD."
+msgstr "Proszę podać datę ważności w tym formacie RRRR-MM-DD."
+
+#: ../pages/content-management-add.php:81
+msgid "New details was successfully added."
+msgstr "Nowe szczegóły została pomyślnie dodana."
+
+#: ../pages/content-management-add.php:109
+#: ../pages/content-management-edit.php:132
+msgid "Click here"
+msgstr "Kliknij tutaj"
+
+#: ../pages/content-management-add.php:109
+#: ../pages/content-management-edit.php:132
+msgid "to view the details"
+msgstr "aby zobaczyć szczegóły"
+
+#: ../pages/content-management-add.php:119
+msgid "Add details"
+msgstr "Udostępniaj"
+
+#: ../pages/content-management-add.php:121
+#: ../pages/content-management-edit.php:144
+#: ../pages/content-management-show.php:61
+#: ../pages/content-management-show.php:70
+msgid "News"
+msgstr "Aktualności"
+
+#: ../pages/content-management-add.php:125
+#: ../pages/content-management-edit.php:148
+msgid "Link"
+msgstr "Link"
+
+#: ../pages/content-management-add.php:129
+#: ../pages/content-management-edit.php:152
+#: ../pages/content-management-show.php:65
+#: ../pages/content-management-show.php:74
+msgid "Order"
+msgstr "Kolejność"
+
+#: ../pages/content-management-add.php:133
+#: ../pages/content-management-edit.php:156
+#: ../pages/content-management-show.php:63
+#: ../pages/content-management-show.php:72
+msgid "Display"
+msgstr "Wyświetlacz"
+
+#: ../pages/content-management-add.php:156
+#: ../pages/content-management-edit.php:179
+msgid "Expiration date"
+msgstr "Data wygaśnięcia"
+
+#: ../pages/content-management-add.php:158
+#: ../pages/content-management-edit.php:181
+msgid ""
+"Please enter the expiration date in this format YYYY-MM-DD <br /> "
+"9999-12-31 : Is equal to no expire."
+msgstr ""
+"Proszę podać datę ważności w tym formacie YYYY-MM-DD <br /> 9999-12-31: Czy "
+"równa nie wygaśnie."
+
+#: ../pages/content-management-add.php:163
+msgid "Submit"
+msgstr "Wyślij"
+
+#: ../pages/content-management-add.php:164
+#: ../pages/content-management-edit.php:187
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: ../pages/content-management-add.php:165
+#: ../pages/content-management-edit.php:188
+#: ../pages/content-management-show.php:115
+msgid "Help"
+msgstr "Pomoc"
+
+#: ../pages/content-management-edit.php:19
+#: ../pages/content-management-show.php:22
+msgid "Oops, selected details doesnt exist."
+msgstr "Ups, wybrane szczegóły nie istnieją."
+
+#: ../pages/content-management-edit.php:116
+msgid "Details was successfully updated."
+msgstr "Szczegóły pomyślnie zaktualizowane."
+
+#: ../pages/content-management-edit.php:142
+#: ../pages/content-management-edit.php:186
+msgid "Update Details"
+msgstr "aktualizacja danych szczegółowych"
+
+#: ../pages/content-management-show.php:36
+msgid "Selected record was successfully deleted."
+msgstr "Wybrany rekord został pomyślnie usunięty."
+
+#: ../pages/content-management-show.php:49
+#: ../pages/content-management-show.php:114
+msgid "Add New"
+msgstr "Dodaj nowy"
+
+#: ../pages/content-management-show.php:64
+#: ../pages/content-management-show.php:73
+msgid "Expiration"
+msgstr "Wygasa"
+
+#: ../pages/content-management-show.php:88
+msgid "Edit"
+msgstr "Edytuj"
+
+#: ../pages/content-management-show.php:89
+msgid "Delete"
+msgstr "Usuń"
+
+#: ../pages/content-management-show.php:103
+msgid "No records available."
+msgstr "Rejestry nie są dostępne."
+
+#: ../pages/content-management-show.php:119
+msgid "Plugin configuration option"
+msgstr "Opcja konfiguracji plugin"
+
+#: ../pages/content-management-show.php:121
+msgid "Drag and drop the widget to your sidebar."
+msgstr "Przeciągnij i upuść widżet (Wyświetlenie całej strony)"
+
+#: ../pages/content-management-show.php:122
+msgid "Add the ticker in posts or pages using short code."
+msgstr "Dodaj plugin na stanowiskach lub stron za pomocą krótkiego kodu."
+
+#: ../pages/content-management-show.php:123
+msgid "Add directly in to the theme using PHP code."
+msgstr "Dodaj bezpośrednio do tematu z wykorzystaniem kodu PHP."

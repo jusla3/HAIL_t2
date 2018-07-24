@@ -1,0 +1,95 @@
+@import 'variables';
+
+.amarkal-settings-sections-wrapper {
+    display: flex;
+
+    .amarkal-settings-sections {
+        flex: 0 0 $sidebar-width;
+        background-color: #fbfbfb;
+        border-right: 5px solid #f1f1f1;
+        box-shadow: inset -5px 0px 10px -5px rgba(0,0,0,0.2), inset 0 5px 10px -5px rgba(0,0,0,0.2), inset 0 -5px 10px -5px rgba(0,0,0,0.2);
+        padding-bottom: 10px;        
+
+        .amarkal-settings-search {
+            position: relative;
+            padding: 10px;
+            border-bottom: 1px solid #f1f1f1;
+
+            input {
+                padding: .4em .6em .4em 2em;
+                border-radius: $border-radius;
+                width: 100%;
+            }
+            
+            .dashicons {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 16px;
+                color: #bbb;
+            }
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                padding: 0 15px;
+                line-height: 3em;
+                border-bottom: 1px solid #f1f1f1;
+                margin-bottom: 0;
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                align-items: center;
+                color: gray;
+
+                &.active{
+                    background-color: white;
+                    transform: translateX(-5px);
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                    border-left: 5px solid white;
+                    padding: 0 10px;
+                    color: #444;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: -10px;
+                        height: 3em;
+                        width: 10px;
+                        background-color: white;
+                    }
+                }
+
+                &:hover:not(.active) {
+                    background-color: rgba(228, 228, 228, 0.3);
+                }
+
+                &.flag-error .dashicons-dismiss {
+                    display: block;
+                }
+
+                &.flag-notice .dashicons-warning {
+                    display: block;
+                }
+
+                .section-title {
+                    flex: 1;
+                }
+
+                .dashicons {
+                    display: none;
+                }
+
+                .dashicons-warning {
+                    color: #f7e100;
+                }
+
+                .dashicons-dismiss {
+                    color: red;
+                }
+            }
+        }
+    }
+}

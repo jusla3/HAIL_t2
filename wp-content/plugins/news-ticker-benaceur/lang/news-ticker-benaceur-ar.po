@@ -1,0 +1,1119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: news ticker benaceur v2.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-19 12:03+0000\n"
+"PO-Revision-Date: 2017-02-19 12:22+0000\n"
+"Last-Translator: ben sitetwo <mohamedcompte55@hotmail.fr>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
+"&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: ALGERIA\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Loco-Target-Locale: ar_AE"
+
+#: news-ticker-benaceur-panel-page.php:125
+msgid "News-Ticker-Benaceur"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:343
+msgid "Choose the post type (You can select more than one type)"
+msgstr "اختر نوع المقالة post type (يمكنك تحديد أكثر من نوع)"
+
+#: news-ticker-benaceur-panel-page.php:368
+#: news-ticker-benaceur-panel-page.php:390
+msgid "Choose the post status (You can select more than one status)"
+msgstr "اختر حالة المقالة post status (يمكنك تحديد أكثر من حالة)"
+
+#: news-ticker-benaceur-panel-page.php:371
+msgid "publish"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:372
+#: news-ticker-benaceur-panel-page.php:394
+msgid "pending"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:373
+msgid "trash"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:374
+msgid "draft"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:375
+msgid "future"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:376
+msgid "private"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:377
+msgid "auto-draft"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:378
+msgid "inherit"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:393
+msgid "approve"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:395
+msgid "all"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:431
+msgid "taxonomy id"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:502
+msgid "The title ltr"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:540
+#: news-ticker-benaceur-panel-page.php:628
+msgid "Simple"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:541
+msgid "Radius"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:561
+msgid "Auto"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:562
+msgid "LTR"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:563
+msgid "RTL"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:604
+msgid "FadeIn"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:605
+msgid "Slide-Up-Down"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:606
+msgid "Scroll-H"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:607
+msgid "Fade"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:608
+msgid "Curtain Ver"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:609
+msgid "Curtain Hor"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:610
+msgid "Turn Up"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:611
+msgid "Turn Down"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:612
+msgid "Turn Left"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:613
+msgid "Turn Right"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:614
+msgid "Slide"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:615
+msgid "Slide Hor"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:616
+msgid "Grow Hor"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:617
+msgid "Grow Ver"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:618
+msgid "Scroll left"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:619
+msgid "Scroll right"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:620
+msgid "Fade Up"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:621
+msgid "Fade LR"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:622
+msgid "Fade Zoom"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:623
+msgid "Zoom"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:624
+msgid "Shuffle"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:625
+msgid "Toss"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:626
+msgid "Blind bott"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:627
+msgid "Uncover"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:629
+msgid "Typing 1"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:630
+msgid "Typing 2"
+msgstr ""
+
+#. Name of the plugin
+msgid "news ticker benaceur"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This plugin allow you to display the latest posts or latest comments in a "
+"bar with twenty seven beautiful animations and effects..."
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://benaceur-php.com/"
+msgstr ""
+
+#. Author of the plugin
+msgid "benaceur"
+msgstr ""
+
+#: news-ticker-benaceur-panel-page.php:58
+msgid "Settings saved successfully."
+msgstr "تم حفظ الإعدادات بنجاح."
+
+#: news-ticker-benaceur-panel-page.php:94
+msgid "Support"
+msgstr "الدعم الفني Support"
+
+#: news-ticker-benaceur-panel-page.php:96
+msgid "You can ask questions about plugin and settings via this topic:"
+msgstr "يمكنك طرح استفساراتك حول الإضافة وإعداداتها عبر هذا الموضوع:"
+
+#: news-ticker-benaceur-panel-page.php:98
+msgid "Contribute to translation of plugin"
+msgstr "المساهمة في ترجمة الإضافة"
+
+#: news-ticker-benaceur-panel-page.php:100
+msgid ""
+"If you want to translate this plugin to your language then send me the "
+"translation files via:"
+msgstr "إذا أردت ترجمة هذه الإضافة إلى لغتك أرسل لي ملفات الترجمة عبر:"
+
+#: news-ticker-benaceur-panel-page.php:102
+msgid "Very important"
+msgstr "هام جدا"
+
+#: news-ticker-benaceur-panel-page.php:104
+msgid ""
+"1- If you use a caching plugin, it is necessary in most cases to clear the "
+"cache after each animation change"
+msgstr ""
+"1- إذا كنت تستعمل إضافة لحفظ الكاش, فمن الضروري في حالات كثيرة إفراغ الكاش "
+"بعد كل تغيير للتأثير animation."
+
+#: news-ticker-benaceur-panel-page.php:105
+msgid ""
+"2- Note for developers: When you use (query_posts) to identify articles that "
+"appear in the home page, for example, or in search page or ... must be taken "
+"into account that it affects the inclusion or exclusion articles that appear "
+"in the ticker, and to avoid this problem, and so as not to interfere with "
+"the insertion or exception settings for latest articles, must use this "
+"condition: $query->is_main_query()"
+msgstr ""
+"2- ملاحظة خاصة بالمطورين: عند استعمال (query_posts) لتحديد المقالات التي "
+"تظهر في الرئيسية مثلا أو في صفحة البحث أو ... يجب الأخذ بعين الاعتبار أن ذلك "
+"يؤثر على إدراج أو استثناء المقالات التي تظهر في الشريط ولتفادي هذه المشكلة "
+"وحتى لا تتعارض مع إعدادات الإدراج أو الاستثناء الخاصة بالإضافة نستعمل شرط: "
+"$query->is_main_query()"
+
+#: news-ticker-benaceur-panel-page.php:109
+msgid "Visit plugin site:"
+msgstr "زيارة موقع الإضافة:"
+
+#: news-ticker-benaceur-panel-page.php:111
+msgid "Quick access to all settings"
+msgstr "الوصول السريع إلى كافة الإعدادات"
+
+#: news-ticker-benaceur-panel-page.php:113
+#: news-ticker-benaceur-panel-page.php:135
+msgid "General settings"
+msgstr "إعدادات عامة"
+
+#: news-ticker-benaceur-panel-page.php:114
+msgid "Settings of hide"
+msgstr "إعدادات إخفاء الشريط"
+
+#: news-ticker-benaceur-panel-page.php:115
+msgid "Title settings"
+msgstr "إعدادات العنوان"
+
+#: news-ticker-benaceur-panel-page.php:116
+#: news-ticker-benaceur-panel-page.php:600
+msgid "Animation"
+msgstr "المؤثرات (Animation)"
+
+#: news-ticker-benaceur-panel-page.php:117
+#: news-ticker-benaceur-panel-page.php:658
+msgid "Settings of style"
+msgstr "خصائص الستايل"
+
+#: news-ticker-benaceur-panel-page.php:118
+msgid ""
+"Remove all settings and data of the plugin from database/Remove "
+"[wp_news_ticker_benaceur_short_code]"
+msgstr ""
+"حذف جميع الإعدادات والبيانات من قاعدة البيانات / حذف "
+"[wp_news_ticker_benaceur_short_code]"
+
+#: news-ticker-benaceur-panel-page.php:119
+msgid "export and import all settings"
+msgstr "تصدير واستيراد كافة الإعدادات"
+
+#: news-ticker-benaceur-panel-page.php:127
+msgid ""
+"Note: After activating the plugin Put the following line in the place (in "
+"template) where you bar to appear:"
+msgstr ""
+"ملاحظة: بعد تفعيل الإضافة ضع السطر التالي في المكان (في القالب) الذي تريد أن "
+"يظهر فيه الشريط:"
+
+#: news-ticker-benaceur-panel-page.php:129
+msgid "or put this short code (in post or page):"
+msgstr "أو ضع هذا الكود القصير داخل المقالة أو الصفحة:"
+
+#: news-ticker-benaceur-panel-page.php:148
+msgid "Enable plugin"
+msgstr "تفعيل الإضافة"
+
+#: news-ticker-benaceur-panel-page.php:158
+msgid "Latest posts"
+msgstr "آخر المقالات"
+
+#: news-ticker-benaceur-panel-page.php:159
+msgid "Latest comments"
+msgstr "آخر التعليقات"
+
+#: news-ticker-benaceur-panel-page.php:173
+msgid "Menu"
+msgstr "قائمة رئيسية"
+
+#: news-ticker-benaceur-panel-page.php:173
+msgid "Submenu"
+msgstr "قائمة فرعية"
+
+#: news-ticker-benaceur-panel-page.php:177
+msgid "Enable News Ticker Benaceur on admin bar in frontend"
+msgstr ""
+"تفعيل News Ticker Benaceur في شريط الإدارة (admin bar) على واجهة الموقع"
+
+#: news-ticker-benaceur-panel-page.php:178
+msgid "Enable News Ticker Benaceur on admin bar in admin panel"
+msgstr ""
+"تفعيل News Ticker Benaceur في شريط الإدارة (admin bar) على لوحة الإدارة"
+
+#: news-ticker-benaceur-panel-page.php:186
+msgid "Hide for visitors"
+msgstr "إخفاء عن الزوار"
+
+#: news-ticker-benaceur-panel-page.php:197
+msgid "Hide for all users"
+msgstr "إخفاء عن جميع الأعضاء"
+
+#: news-ticker-benaceur-panel-page.php:208
+msgid "Hide for this group(s) (You can select more than one group)"
+msgstr "إخفاء عن مجموعة (يمكنك تحديد أكثر من مجموعة)"
+
+#: news-ticker-benaceur-panel-page.php:213
+msgid "Remove Selection"
+msgstr "إلغاء التحديد"
+
+#: news-ticker-benaceur-panel-page.php:229
+msgid "Hide for this user id"
+msgstr "إخفاء عن المستخدم حسب المعرف ID"
+
+#: news-ticker-benaceur-panel-page.php:232
+msgid "Enter here the user id"
+msgstr "أدخل هنا رقم العضوية"
+
+#: news-ticker-benaceur-panel-page.php:233
+#: news-ticker-benaceur-panel-page.php:311
+#: news-ticker-benaceur-panel-page.php:331
+#: news-ticker-benaceur-panel-page.php:465
+msgid "Separate between id by commas, for example: 2,16,223"
+msgstr "  افصل بين المعرفات بفاصلة (,) على سبيل المثال : 2,16,223"
+
+#: news-ticker-benaceur-panel-page.php:237
+msgid "Hide for all except administrator"
+msgstr "إخفاء عن الجميع ماعدا المدير"
+
+#: news-ticker-benaceur-panel-page.php:248
+msgid "Hide in:"
+msgstr "إخفاء في:"
+
+#: news-ticker-benaceur-panel-page.php:252
+msgid "home"
+msgstr "الرئيسية"
+
+#: news-ticker-benaceur-panel-page.php:263
+msgid "category page"
+msgstr "صفحة التصنيف"
+
+#: news-ticker-benaceur-panel-page.php:274
+msgid "author page"
+msgstr "صفحة مقالات الكاتب"
+
+#: news-ticker-benaceur-panel-page.php:285
+msgid "search page"
+msgstr "صفحة نتائج البحث"
+
+#: news-ticker-benaceur-panel-page.php:296
+msgid "single post (in post)"
+msgstr "داخل المقالة single"
+
+#: news-ticker-benaceur-panel-page.php:307
+msgid "ID of post"
+msgstr "معرف المقالة (ID of post)"
+
+#: news-ticker-benaceur-panel-page.php:310
+#: news-ticker-benaceur-panel-page.php:330
+#: news-ticker-benaceur-panel-page.php:436
+msgid "Leave blank to activate All"
+msgstr "اتركه فارغا لتفعيل الجميع"
+
+#: news-ticker-benaceur-panel-page.php:316
+msgid "pages"
+msgstr "الصفحات"
+
+#: news-ticker-benaceur-panel-page.php:327
+msgid "ID of page"
+msgstr "معرف الصفحة (ID of page)"
+
+#: news-ticker-benaceur-panel-page.php:406
+msgid "Choose the name of taxonomy"
+msgstr "اختر اسم taxonomy"
+
+#: news-ticker-benaceur-panel-page.php:430
+msgid "category id"
+msgstr "تصنيف رقم"
+
+#: news-ticker-benaceur-panel-page.php:433
+msgid "post id"
+msgstr "مقالة رقم"
+
+#: news-ticker-benaceur-panel-page.php:436
+msgid "Enter the id"
+msgstr "أدخل المعرّف"
+
+#: news-ticker-benaceur-panel-page.php:438
+msgid "Display all categories"
+msgstr "إظهار جميع التصنيفات"
+
+#: news-ticker-benaceur-panel-page.php:445
+msgid "Name cat"
+msgstr "اسم التصنيف"
+
+#: news-ticker-benaceur-panel-page.php:446
+msgid "id cat"
+msgstr "رقم التصنيف id"
+
+#: news-ticker-benaceur-panel-page.php:476
+msgid "Include cat id"
+msgstr "إدراج تصنيف رقم"
+
+#: news-ticker-benaceur-panel-page.php:477
+msgid "Include post id"
+msgstr "إدراج مقالة رقم"
+
+#: news-ticker-benaceur-panel-page.php:487
+msgid "Exclude cat id"
+msgstr "استثناء تصنيف رقم"
+
+#: news-ticker-benaceur-panel-page.php:488
+msgid "Exclude post id"
+msgstr "استثناء مقالة رقم"
+
+#: news-ticker-benaceur-panel-page.php:500
+msgid ""
+"Choose one title for each site according direction if your multilingual site"
+msgstr "اختر عنوانا لكل موقع حسب الاتجاه إذا كان موقعك متعدد اللغات"
+
+#: news-ticker-benaceur-panel-page.php:508
+msgid "The title rtl"
+msgstr "العنوان rtl"
+
+#: news-ticker-benaceur-panel-page.php:514
+msgid "Disable Title"
+msgstr "تعطيل العنوان"
+
+#: news-ticker-benaceur-panel-page.php:525
+msgid "Title animation pulsate"
+msgstr "تأثير pulsate على العنوان"
+
+#: news-ticker-benaceur-panel-page.php:536
+msgid "Title styles"
+msgstr "ستايل العنوان"
+
+#: news-ticker-benaceur-panel-page.php:549
+msgid "Numbre of posts or comments"
+msgstr "عدد المقالات أو التعليقات"
+
+#: news-ticker-benaceur-panel-page.php:557
+msgid "Direction"
+msgstr "الاتجاه"
+
+#: news-ticker-benaceur-panel-page.php:568
+msgid "Number of letters of Title"
+msgstr "عدد حروف العنوان"
+
+#: news-ticker-benaceur-panel-page.php:574
+msgid "Number of letters of Comments"
+msgstr "عدد حروف التعليق"
+
+#: news-ticker-benaceur-panel-page.php:582
+#: news-ticker-benaceur-panel-page.php:588
+#: news-ticker-benaceur-panel-page.php:641
+#: news-ticker-benaceur-panel-page.php:647
+#: news-ticker-benaceur-panel-page.php:1106
+#: news-ticker-benaceur-panel-page.php:1113
+#: news-ticker-benaceur-panel-page.php:1154
+#: news-ticker-benaceur-panel-page.php:1165
+msgid "Please wait..."
+msgstr "انتظر قليلا من فضلك ..."
+
+#: news-ticker-benaceur-panel-page.php:586
+msgid "Click to reset properties plugin"
+msgstr "انقر هنا لإعادة تعيين إعدادات الإضافة"
+
+#: news-ticker-benaceur-panel-page.php:645
+msgid "Click to reset Properties animations"
+msgstr "انقر هنا لإعادة تعيين إعدادات المؤثرات"
+
+#: news-ticker-benaceur-panel-page.php:666
+#: includes/news-ticker-benaceur-styles-p-options.php:9
+#: includes/news-ticker-benaceur-styles-p-options.php:56
+msgid "Background color"
+msgstr "لون الخلفية"
+
+#: news-ticker-benaceur-panel-page.php:675
+#: includes/news-ticker-benaceur-styles-p-options.php:18
+#: includes/news-ticker-benaceur-styles-p-options.php:65
+msgid "Text color"
+msgstr "لون النص"
+
+#: news-ticker-benaceur-panel-page.php:684
+msgid "Background color of title"
+msgstr "لون خلفية العنوان"
+
+#: news-ticker-benaceur-panel-page.php:693
+msgid "Text color of title (if animation pulsate is disabled)"
+msgstr "لون نص العنوان (إذا كان تأثير pulsate معطلا) "
+
+#: news-ticker-benaceur-panel-page.php:702
+msgid "Border color"
+msgstr "لون الإطار"
+
+#: news-ticker-benaceur-panel-page.php:711
+msgid "Border color (Title)"
+msgstr "لون الإطار (العنوان)"
+
+#: news-ticker-benaceur-panel-page.php:720
+msgid "Hover color"
+msgstr "لون الروابط عند تمرير الفأرة"
+
+#: news-ticker-benaceur-panel-page.php:728
+msgid "border (Title)"
+msgstr "الإطار (العنوان)"
+
+#: news-ticker-benaceur-panel-page.php:736
+msgid "border top"
+msgstr "الإطار العلوي"
+
+#: news-ticker-benaceur-panel-page.php:744
+msgid "border bottom"
+msgstr "الإطار السفلي"
+
+#: news-ticker-benaceur-panel-page.php:752
+msgid "border right"
+msgstr "الإطار الأيمن"
+
+#: news-ticker-benaceur-panel-page.php:760
+msgid "border left"
+msgstr "الإطار الأيسر"
+
+#: news-ticker-benaceur-panel-page.php:768
+msgid "border radius"
+msgstr "زوايا الإطار (border radius)"
+
+#: news-ticker-benaceur-panel-page.php:776
+msgid "The level of transparency 1-0.1"
+msgstr "نسبة الشفافية من 1 إلى 0.1"
+
+#: news-ticker-benaceur-panel-page.php:785
+msgid ""
+"Width by adding: px or % (It is recommended to use % if your theme uses the "
+"percentage in width,"
+msgstr ""
+"العرض بإضافة % أو px (يستحسن استخدام % إذا كان قالبك يحسب العرض بالنسبة "
+"المئوية,"
+
+#: news-ticker-benaceur-panel-page.php:785
+msgid "and use px if your theme uses the pixels in width.)"
+msgstr "وباستعمال px إذا كان القالب يحسب العرض بالبيكسل.) "
+
+#: news-ticker-benaceur-panel-page.php:794
+#: news-ticker-benaceur-panel-page.php:1005
+msgid "Height"
+msgstr "الإرتفاع"
+
+#: news-ticker-benaceur-panel-page.php:802
+msgid "line height (Title)"
+msgstr "line height (العنوان)"
+
+#: news-ticker-benaceur-panel-page.php:810
+msgid "Width of title background"
+msgstr "عرض خلفية العنوان"
+
+#: news-ticker-benaceur-panel-page.php:818
+#: news-ticker-benaceur-panel-page.php:1013 includes/option-anim.php:17
+msgid "padding top"
+msgstr "المسافة العلوية من الداخل"
+
+#: news-ticker-benaceur-panel-page.php:826
+msgid "padding bottom"
+msgstr "المسافة السفلية من الداخل"
+
+#: news-ticker-benaceur-panel-page.php:834
+msgid "padding top (Title)"
+msgstr "المسافة العلوية من الداخل (العنوان)"
+
+#: news-ticker-benaceur-panel-page.php:842
+msgid "margin top"
+msgstr "المسافة العلوية من الخارج"
+
+#: news-ticker-benaceur-panel-page.php:850
+msgid "margin bottom"
+msgstr "المسافة السفلية من الخارج"
+
+#: news-ticker-benaceur-panel-page.php:856
+msgid "Font family"
+msgstr "عائلة الخط"
+
+#: news-ticker-benaceur-panel-page.php:858
+msgid "Disable this font: DroidKufi_Ben "
+msgstr "تعطيل هذا الخط إن كان موجودا عندك: DroidKufi_Ben"
+
+#: news-ticker-benaceur-panel-page.php:868
+msgid "Font size"
+msgstr "حجم الخط"
+
+#: news-ticker-benaceur-panel-page.php:876
+msgid "Font family (title)"
+msgstr "عائلة الخط (العنوان)"
+
+#: news-ticker-benaceur-panel-page.php:884
+msgid "Font size (title)"
+msgstr "حجم الخط (العنوان)"
+
+#: news-ticker-benaceur-panel-page.php:889
+#: news-ticker-benaceur-panel-page.php:956
+msgid "Normal"
+msgstr "عادي"
+
+#: news-ticker-benaceur-panel-page.php:889
+#: news-ticker-benaceur-panel-page.php:956
+msgid "Bold"
+msgstr "عريض"
+
+#: news-ticker-benaceur-panel-page.php:892
+msgid "Font weight"
+msgstr "عرض الخط"
+
+#: news-ticker-benaceur-panel-page.php:897
+#: news-ticker-benaceur-panel-page.php:914
+msgid "no"
+msgstr "لا"
+
+#: news-ticker-benaceur-panel-page.php:897
+#: news-ticker-benaceur-panel-page.php:914
+msgid "yes"
+msgstr "نعم"
+
+#: news-ticker-benaceur-panel-page.php:900
+msgid "text shadow"
+msgstr "ظل النص"
+
+#: news-ticker-benaceur-panel-page.php:909
+msgid "text shadow color"
+msgstr "لون ظل النص"
+
+#: news-ticker-benaceur-panel-page.php:917
+msgid "box shadow"
+msgstr "ظل الصندوق"
+
+#: news-ticker-benaceur-panel-page.php:926
+msgid "box shadow color"
+msgstr "لون ظل الصندوق"
+
+#: news-ticker-benaceur-panel-page.php:934
+msgid "box shadow pixel"
+msgstr "بيكسل ظل الصندوق"
+
+#: news-ticker-benaceur-panel-page.php:943
+msgid "Color of prev/next button"
+msgstr "لون زر السابق/التالي"
+
+#: news-ticker-benaceur-panel-page.php:951
+msgid "Font size of prev/next button"
+msgstr "حجم خط زر السابق/التالي"
+
+#: news-ticker-benaceur-panel-page.php:959
+msgid "Weight of prev/next button"
+msgstr "عرض زر السابق/التالي"
+
+#: news-ticker-benaceur-panel-page.php:967
+msgid "distance top the prev/next button"
+msgstr "المسافة أعلى زر السابق/التالي"
+
+#: news-ticker-benaceur-panel-page.php:970
+msgid ""
+"Enable this feature (style of mobile) if your theme uses the percentage % in "
+"the width of the site"
+msgstr ""
+"تفعيل هذه الخاصية (نمط الموبايل) إذا كان قالبك يستعمل النسبة المئوية % في "
+"عرض الموقع"
+
+#: news-ticker-benaceur-panel-page.php:979
+msgid "Enable style of mobile"
+msgstr "تفعيل نمط الموبايل"
+
+#: news-ticker-benaceur-panel-page.php:989
+msgid "In a screen where the maximum width is"
+msgstr "في شاشة عرضها أقل من"
+
+#: news-ticker-benaceur-panel-page.php:997
+msgid "In a screen where the minimum width is"
+msgstr "في شاشة عرضها أكثر من"
+
+#: news-ticker-benaceur-panel-page.php:1022
+#: news-ticker-benaceur-panel-page.php:1024
+msgid "padding right"
+msgstr "المسافة عن اليمين من الداخل"
+
+#: news-ticker-benaceur-panel-page.php:1026
+msgid "padding left"
+msgstr " المسافة عن الشمال من الداخل "
+
+#: news-ticker-benaceur-panel-page.php:1035
+msgid "min height (Slide-Up-Down)"
+msgstr "الإرتفاع (Slide-Up-Down)"
+
+#: news-ticker-benaceur-panel-page.php:1043
+msgid "The distance between the lines"
+msgstr "المسافة بين السطور"
+
+#: news-ticker-benaceur-panel-page.php:1045
+msgid "Or choose:"
+msgstr "أو اختيار:"
+
+#: news-ticker-benaceur-panel-page.php:1054
+msgid "Hide the news ticker in a screen where the width is less than"
+msgstr "إخفاء الشريط (news ticker) في شاشة عرضها أقل من"
+
+#: news-ticker-benaceur-panel-page.php:1064
+msgid "The smaller width than"
+msgstr "العرض أقل من"
+
+#: news-ticker-benaceur-panel-page.php:1072
+msgid "Orange Theme"
+msgstr "ثيم برتقالي"
+
+#: news-ticker-benaceur-panel-page.php:1073
+msgid "Custom Theme"
+msgstr "ثيم مخصص"
+
+#: news-ticker-benaceur-panel-page.php:1074
+msgid "Standard theme"
+msgstr "ثيم قياسي"
+
+#: news-ticker-benaceur-panel-page.php:1078
+msgid "Styles options page"
+msgstr "ستايل صفحة الإعدادات"
+
+#: news-ticker-benaceur-panel-page.php:1090
+msgid "Hide the plugin rating icon"
+msgstr "إخفاء أيقونة تقييم الإضافة"
+
+#: news-ticker-benaceur-panel-page.php:1100
+msgid "Export time the XML file GMT+"
+msgstr "وقت تصدير ملف الإعددات GMT+"
+
+#: news-ticker-benaceur-panel-page.php:1111
+msgid "Click to reset style properties plugin"
+msgstr "انقر هنا لإعادة تعيين إعدادات ستايل الإضافة"
+
+#: news-ticker-benaceur-panel-page.php:1127
+msgid ""
+"Remove all settings and data of the plugin from database when the plugin is "
+"disabled"
+msgstr "حذف جميع إعدادات وبيانات الإضافة من قاعدة البيانات عند تعطيلها"
+
+#: news-ticker-benaceur-panel-page.php:1134
+msgid "Do not delete"
+msgstr "لا تحذف"
+
+#: news-ticker-benaceur-panel-page.php:1142
+msgid ""
+"Remove [wp_news_ticker_benaceur_short_code] from posts and pages when the "
+"plugin is disabled (is recommended that take a copy of the database before "
+"this operation)"
+msgstr ""
+"حذف [wp_news_ticker_benaceur_short_code] من المقالات والصفحات عند تعطيل "
+"الإضافة (يستحسن أخذ نسخة احتياطية من قاعدة البيانات قبل هذه العملية)"
+
+#: news-ticker-benaceur-panel-page.php:1149
+msgid "Do not remove"
+msgstr "لا تحذف"
+
+#: news-ticker-benaceur-panel-page.php:1156
+msgid "in progress save all changes ..."
+msgstr "جاري حفظ جميع التغييرات ..."
+
+#: news-ticker-benaceur-panel-page.php:1157
+msgid "Save all changes"
+msgstr "حفظ جميع التغييرات"
+
+#: news-ticker-benaceur-panel-page.php:1163
+msgid "Reset all settings"
+msgstr "إعادة تعيين جميع الإعدادات (Reset)"
+
+#: news-ticker-benaceur-panel-page.php:1176
+msgid "My plugins"
+msgstr "إضافاتي My plugins"
+
+#: news-ticker-benaceur-panel-page.php:1183
+msgid "Export settings"
+msgstr "تصدير الإعدادات"
+
+#: news-ticker-benaceur-panel-page.php:1185
+msgid ""
+"Export all plugin settings in an XML file that helps you to save all your "
+"settings for reuse here or at another location with ease."
+msgstr ""
+"تصدير جميع اعدادات الإضافة في ملف  xml يسمح لك ويساعدك في حفظ جميع إعداداتك "
+"الخاصة لإعادة استعمالها هنا أو في موقع آخر بكل سهولة."
+
+#: news-ticker-benaceur-panel-page.php:1197
+msgid "Import settings"
+msgstr "استيراد الإعددات"
+
+#: news-ticker-benaceur-panel-page.php:1199
+msgid ""
+"Click on \"Import\" to restore all your saved settings from the XML file"
+msgstr "اضغط على \"استيراد\" لإعادة جميع إعداداتك المحفوظة عبر ملف xml."
+
+#: news-ticker-benaceur-panel-page.php:1216
+msgid "Do not forget to rate the plugin"
+msgstr "لا تنس تقييم الإضافة"
+
+#: news-ticker-benaceur-panel-page.php:1321
+msgid "All changes saved successfully, close this message!"
+msgstr "تم حفظ جميع التغييرات بنجاح, أغلق هذه الرسالة"
+
+#: news-ticker-benaceur.php:36
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: news-ticker-benaceur.php:793
+msgid "You are using Version"
+msgstr "أنت تستخدم النسخة"
+
+#: news-ticker-benaceur.php:793
+msgid "There is a newer version, it's recommended to"
+msgstr "هناك نسخة أحدث متاحة, يستحسن"
+
+#: news-ticker-benaceur.php:793
+msgid "update now"
+msgstr "التحديث الآن"
+
+#: includes/image-attachment-scrollntb.php:21
+msgid "Upload image"
+msgstr "رفع صورة"
+
+#: includes/image-attachment-scrollntb.php:23
+msgid "Save image"
+msgstr "حفظ الصورة"
+
+#: includes/image-attachment-scrollntb.php:24
+msgid "Reset default image"
+msgstr "إعادة الصورة الافتراضية"
+
+#: includes/news-ticker-benaceur-styles-p-options.php:27
+#: includes/news-ticker-benaceur-styles-p-options.php:74
+msgid "Background color of the input boxes"
+msgstr "لون خلفية صندوق الإدخال "
+
+#: includes/news-ticker-benaceur-styles-p-options.php:36
+#: includes/news-ticker-benaceur-styles-p-options.php:83
+msgid "Background color settings saved message"
+msgstr "لون خلفية رسالة تم حفظ الإعدادات"
+
+#: includes/news-ticker-benaceur-styles-p-options.php:45
+#: includes/news-ticker-benaceur-styles-p-options.php:92
+msgid "Background on/off color"
+msgstr "لون خلفية on/off"
+
+#: includes/notices-ntb.php:17
+msgid "Important"
+msgstr "مُهمّ"
+
+#: includes/notices-ntb.php:17
+msgid ""
+"my latest plugin,perhaps you might be interested <a target=\"_blank\" "
+"href=\"https://wordpress.org/plugins/restrict-usernames-emails-characters/\">"
+"Restrict Usernames Emails Characters</a>"
+msgstr ""
+"أحدث إضافاتي plugins, ربما قد تهمك <a target=\"_blank\" href=\"https:"
+"//wordpress.org/plugins/restrict-usernames-emails-characters/\">Restrict "
+"Usernames Emails Characters</a>"
+
+#: includes/option-anim.php:5 includes/option-anim.php:92
+#: includes/option-anim.php:164 includes/option-anim.php:207
+#: includes/option-anim.php:331 includes/option-anim.php:382
+msgid "TimeOut"
+msgstr "وقت التوقف (بين عنوان وآخر)"
+
+#: includes/option-anim.php:11 includes/option-anim.php:170
+#: includes/option-anim.php:251 includes/option-anim.php:325
+#: includes/option-anim.php:376
+msgid "Speed"
+msgstr "السرعة"
+
+#: includes/option-anim.php:23
+msgid "margin left (ltr)"
+msgstr "المسافة عن الشمال من الخارج (ltr)"
+
+#: includes/option-anim.php:29
+msgid "margin right (rtl)"
+msgstr "المسافة عن اليمين من الخارج (rtl)"
+
+#: includes/option-anim.php:35
+msgid "padding top (cursor below the title)"
+msgstr "المسافة العلوية من الداخل (المؤشر تحت العنوان)"
+
+#: includes/option-anim.php:41
+msgid "top (cursor)"
+msgstr "المسافة العلوية من الخارج (المؤشر)"
+
+#: includes/option-anim.php:47
+msgid "margin left/right (cursor)"
+msgstr "عن الشمال / عن اليمين (المؤشر)"
+
+#: includes/option-anim.php:53 includes/option-anim.php:144
+#: includes/option-anim.php:223 includes/option-anim.php:297
+#: includes/option-anim.php:359 includes/option-anim.php:430
+msgid "Pause on hover"
+msgstr "توقف عند تمرير الفأرة"
+
+#: includes/option-anim.php:65
+msgid "Enable cursor"
+msgstr "تفعيل المؤشر"
+
+#: includes/option-anim.php:71
+msgid "Disable cursor"
+msgstr "تعطيل المؤشر"
+
+#: includes/option-anim.php:77 includes/option-anim.php:120
+#: includes/option-anim.php:196 includes/option-anim.php:349
+#: includes/option-anim.php:420
+msgid "Enable img next/prev"
+msgstr "تفعيل زر السابق/التالي"
+
+#: includes/option-anim.php:83 includes/option-anim.php:126
+#: includes/option-anim.php:203 includes/option-anim.php:355
+#: includes/option-anim.php:426
+msgid "Disable img next/prev"
+msgstr "تعطيل زر السابق/التالي"
+
+#: includes/option-anim.php:89
+msgid "if style mobile is enable:"
+msgstr "عند تفعيل نمط الموبايل:"
+
+#: includes/option-anim.php:133
+msgid "Up"
+msgstr "إلى أعلى"
+
+#: includes/option-anim.php:139
+msgid "Down"
+msgstr "إلى أسفل"
+
+#: includes/option-anim.php:154 includes/option-anim.php:233
+msgid "Disable autostart"
+msgstr "تعطيل التشغيل التلقائي"
+
+#: includes/option-anim.php:177 includes/option-anim.php:214
+#: includes/option-anim.php:264 includes/option-anim.php:338
+#: includes/option-anim.php:389
+msgid "Distance from the right"
+msgstr "المسافة عن اليمين"
+
+#: includes/option-anim.php:179 includes/option-anim.php:216
+#: includes/option-anim.php:266 includes/option-anim.php:340
+#: includes/option-anim.php:391
+msgid "Distance from the left"
+msgstr "المسافة عن الشمال"
+
+#: includes/option-anim.php:257
+msgid "Number of title characters"
+msgstr "عدد حروف العنوان"
+
+#: includes/option-anim.php:273
+msgid "The distance between elements"
+msgstr "المسافة بين العناصر"
+
+#: includes/option-anim.php:279
+msgid "Image dimensions"
+msgstr "أبعاد الصورة"
+
+#: includes/option-anim.php:288
+msgid "Distance from the right/left of the image"
+msgstr "المسافة عن يمين/شمال الصورة"
+
+#: includes/option-anim.php:307
+msgid "+ date and title"
+msgstr "+ التاريخ والعنوان"
+
+#: includes/option-anim.php:399
+msgid "padding left (img next/prev enabled)"
+msgstr "المسافة عن الشمال من الداخل (زر السابق/التالي مفعّل)"
+
+#: includes/option-anim.php:401
+msgid "padding right (img next/prev enabled)"
+msgstr "المسافة عن اليمين من الداخل (زر السابق/التالي مفعّل)"
+
+#: includes/option-anim.php:409
+msgid "padding left (img next/prev disabled)"
+msgstr "المسافة عن الشمال من الداخل (زر السابق/التالي معطّل)"
+
+#: includes/option-anim.php:411
+msgid "padding right (img next/prev disabled)"
+msgstr "المسافة عن اليمين من الداخل (زر السابق/التالي معطّل)"
+
+#: includes/option-anim.php:440
+msgid "Use java in js file (outside php file)"
+msgstr "استخدام الجافا في ملف js (خارج ملف php)"
+
+#: includes/styles-title.php:10 includes/styles-title.php:23
+msgid "Top left"
+msgstr "أعلى اليسار"
+
+#: includes/styles-title.php:16 includes/styles-title.php:29
+msgid "Top right"
+msgstr "أعلى اليمين"
+
+#: includes/styles-title.php:36
+msgid "Bottom right"
+msgstr "أسفل اليمين"
+
+#: includes/styles-title.php:42
+msgid "Bottom left"
+msgstr "أسفل اليسار"
+
+#: style-anim/no-scrollntb-fadeIn.php:3 style-anim/no-scrollntb-fadeIn.php:7
+#: style-anim/no-scrollntb-fadeIn.php:11 style-anim/no-scrollntb-fadeIn.php:13
+#: style-anim/no-scrollntb-scroll_up.php:3
+#: style-anim/no-scrollntb-scroll_up.php:7
+#: style-anim/no-scrollntb-scroll_up.php:11
+#: style-anim/no-scrollntb-scroll_up.php:13 style-anim/no-scrollntb-two.php:3
+#: style-anim/no-scrollntb-two.php:7 style-anim/no-scrollntb-two.php:11
+#: style-anim/no-scrollntb-two.php:13 style-anim/typ_2/style-mobile-dis.php:3
+#: style-anim/typ_2/style-mobile-dis.php:7
+#: style-anim/typ_2/style-mobile-dis.php:11
+#: style-anim/typ_2/style-mobile-dis.php:13
+#: style-anim/typ_2/style-mobile-ena.php:3
+#: style-anim/typ_2/style-mobile-ena.php:7
+#: style-anim/typ_2/style-mobile-ena.php:11
+#: style-anim/typ_2/style-mobile-ena.php:13
+msgid "prev"
+msgstr "السابق"
+
+#: style-anim/no-scrollntb-fadeIn.php:4 style-anim/no-scrollntb-fadeIn.php:6
+#: style-anim/no-scrollntb-fadeIn.php:10 style-anim/no-scrollntb-fadeIn.php:14
+#: style-anim/no-scrollntb-scroll_up.php:4
+#: style-anim/no-scrollntb-scroll_up.php:6
+#: style-anim/no-scrollntb-scroll_up.php:10
+#: style-anim/no-scrollntb-scroll_up.php:14 style-anim/no-scrollntb-two.php:4
+#: style-anim/no-scrollntb-two.php:6 style-anim/no-scrollntb-two.php:10
+#: style-anim/no-scrollntb-two.php:14 style-anim/typ_2/style-mobile-dis.php:4
+#: style-anim/typ_2/style-mobile-dis.php:6
+#: style-anim/typ_2/style-mobile-dis.php:10
+#: style-anim/typ_2/style-mobile-dis.php:14
+#: style-anim/typ_2/style-mobile-ena.php:4
+#: style-anim/typ_2/style-mobile-ena.php:6
+#: style-anim/typ_2/style-mobile-ena.php:10
+#: style-anim/typ_2/style-mobile-ena.php:14
+msgid "next"
+msgstr "التالي"
+
+#: style-anim/no-scrollntb-fadeIn.php:43
+#: style-anim/no-scrollntb-scroll_up.php:43 style-anim/no-scrollntb-two.php:40
+#: style-anim/scrollntb.php:42 style-anim/typ_2/style-mobile-dis.php:41
+#: style-anim/typ_2/style-mobile-ena.php:41
+#: style-anim/typ_2/style-mobile-ena.php:76
+msgid "No comments"
+msgstr "لا توجد تعليقات"
