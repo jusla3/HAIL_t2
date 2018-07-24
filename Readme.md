@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/jusla3/GIT-SETUP.svg?branch=master)](https://travis-ci.org/jusla3/GIT-SETUP)
 
 
-# HAIL LTD Website developed using wordpress By Lazaro Dos Santos
-
+# HAIL LTD Website developed using wordpress
+# By Lazaro Dos Santos
 This is simply a skeleton repo for a WordPress site. Use it to jump-start your WordPress site repos, or fork it and customize it to your own liking!
 
 ## Assumptions
