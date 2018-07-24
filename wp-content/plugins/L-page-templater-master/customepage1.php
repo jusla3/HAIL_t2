@@ -7,7 +7,17 @@
 ?>
 
 
-<?php get_header(); ?>
+<?php
+if(is_page(contact))
+{
+get_header('contact');
+}
+else
+{
+get_header();
+}
+wp_head();
+?>
 
 
 <div id="primary" class="content-area">
