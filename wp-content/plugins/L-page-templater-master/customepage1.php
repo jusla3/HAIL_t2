@@ -8,7 +8,7 @@
 
 
 <?php
-if(is_page(contact))
+if(is_page(Contact))
 {
 get_header('contact');
 }
