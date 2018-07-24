@@ -33,7 +33,17 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+	<!-------------------Testing PoUp css-->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/wp-content/themes/shapely/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/wp-content/themes/shapely/assets/css/style.css">
+	<!-------------------Testing PoUp css-->
+	<!-------------------Testing PoUp JS-->
+	<script src="/wp-content/themes/shapely/assets/js/jquery.min.js"></script>
+	<script src="/wp-content/themes/shapely/assets/js/script0.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<!-------------------Testing PoUp JS-->
 
 	<?php wp_head(); ?>
 </head>
