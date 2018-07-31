@@ -52,7 +52,7 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'shapely' ); ?></a>
-
+<!---- POPUP FOR ---->
 	<header id="masthead" class="site-header<?php echo get_theme_mod( 'mobile_menu_on_desktop', false ) ? ' mobile-menu' : ''; ?>" role="banner">
 		<div class="nav-container">
 			<nav <?php echo $style; ?> id="site-navigation" class="main-navigation" role="navigation">
