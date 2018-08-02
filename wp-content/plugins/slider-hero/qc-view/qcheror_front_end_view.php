@@ -41,8 +41,17 @@ function qcld_slider_front_end($_id,$_slider, $_slide) {
 	wp_enqueue_style( 'qcld_slider_hero_css', QCLD_sliderhero_CSS . "/slider_hero.css");
 	if($_slider[0]->type!='no_effect') :
 	wp_enqueue_script( 'qcld_hero_particles_js', QCLD_sliderhero_js . '/particles.js', array(), false, false );
+
+	
 	wp_enqueue_script( 'qcld_hero_particles_app_js', QCLD_sliderhero_js . "/particle_app.js", array('jquery'),$ver = false, $in_footer = false);
 	endif;
+	
+	if(isset($params->video)&& $params->video=='youtube'): 
+		if(isset($params->bg_video_youtube)&& $params->bg_video_youtube!=''):
+			wp_enqueue_script( 'qcld_hero_slider_youtube_api', "https://www.youtube.com/iframe_api", array(), false, false);
+		endif;
+	endif;
+	
 	
 	if($_slider[0]->type=='torus') :
 		wp_enqueue_script( 'qcld_hero_torus_three_js', QCLD_sliderhero_js . "/three.js", array('jquery'));
@@ -196,6 +205,24 @@ if(isset($params->button1->align) and $params->button1->align!=''){
 
 #particles-js<?php echo intval($_id); ?> .slider-x-lead-title, #particles-js<?php echo intval($_id); ?> .hero_slider_btn, #particles-js<?php echo intval($_id); ?> .slider-x-item-title{margin: 15px 0px;}
 
+#particles-js<?php echo intval($_id); ?> .slider-x-lead-title{
+<?php if(isset($params->titlebottommargin)&&$params->titlebottommargin!=''): ?>
+	margin-bottom: <?php echo $params->titlebottommargin; ?>;
+<?php endif; ?>	
+}
+
+#particles-js<?php echo intval($_id); ?> .slider-x-item-title{
+<?php if(isset($params->descriptionbottommargin)&&$params->descriptionbottommargin!=''): ?>
+	margin-bottom: <?php echo $params->descriptionbottommargin; ?>;
+<?php endif; ?>	
+}
+
+#particles-js<?php echo intval($_id); ?> .hero_slider_btn{
+<?php if(isset($params->buttonbottommargin)&&$params->buttonbottommargin!=''): ?>
+	margin-bottom: <?php echo $params->buttonbottommargin; ?>;
+<?php endif; ?>	
+}
+
 .qcld_hero_content_area p{
 <?php 
 if(isset($params->descriptioncolor) and $params->descriptioncolor!=''){
@@ -252,8 +279,11 @@ if(isset($params->video)&& $params->video=='youtube'):
 	if(isset($params->bg_video_youtube)&& $params->bg_video_youtube!=''):
 ?>
 <div class="sh_bg_video">
-	<div class="sh_bg_video_fluid" style="position:relative;padding:0;<?php echo (wp_get_theme()=='Divi'?'':'padding-top:56.3%'); ?>;">
-		<iframe style="position:absolute;left:0;top:0;" width="560" height="315" src="https://www.youtube.com/embed/<?php echo $params->bg_video_youtube; ?>?autoplay=1<?php echo (isset($params->video_loop)&& $params->video_loop=='1'?'&loop=1&playlist='.$params->bg_video_youtube:'&loop=0'); ?>&controls=0&showinfo=0<?php echo (isset($params->video_mute)&& $params->video_mute=='1'?'&mute=1':'&mute=0'); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<div class="sh_bg_video_fluid" style="position:relative;padding:0;padding-top: 56.2%;height: 100%;">
+		<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $params->bg_video_youtube; ?>?autoplay=1<?php echo (isset($params->video_loop)&& $params->video_loop=='1'?'&loop=1&playlist='.$params->bg_video_youtube:'&loop=0'); ?>&controls=0&showinfo=0<?php echo (isset($params->video_mute)&& $params->video_mute=='1'?'&mute=1':'&mute=0'); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+		
+		<div id="hero_youtube_video"></div>
+		
 	</div>
 </div>
 <?php 
@@ -291,13 +321,19 @@ if($slide->published=='1') :
 			$preimg[] = $slide->image_link;
 		}
 	?>
-	<div class="qcld_hero_content_area" <?php echo (isset($slide->image_link)&&$slide->image_link!=''?'data-bg-image="'.$slide->image_link.'"':'data-bg-image=""') ?>>
+	<div class="qcld_hero_content_area" <?php echo (isset($slide->image_link)&&$slide->image_link!=''?'data-bg-image="'.$slide->image_link.'"':'data-bg-image=""') ?> style="display:none">
 
 		<?php 
 		foreach($odarr as $key=>$val ){
 			if($key=='title'){
 			?>
-				<h2 class="slider-x-lead-title"><?php echo wp_unslash( esc_js($slide->title)); ?></h2>
+
+				<?php if(isset($params->titlebgcolor) and $params->titlebgcolor!=''): ?>
+				<h2 class="slider-x-lead-title"><span style="background-color:<?php echo $params->titlebgcolor; ?>;padding: 0px 10px;"><?php echo wp_unslash(($slide->title)); ?></span></h2>
+				<?php else: ?>
+				<h2 class="slider-x-lead-title"><?php echo wp_unslash(($slide->title)); ?></h2>
+				<?php endif; ?>
+				
 			<?php
 			}elseif($key=='description'){
 			?>
@@ -418,7 +454,9 @@ function getOffset1( el ) {
     }
     return { top: _y, left: _x };
 }
+
 jQuery(document).ready(function($){
+	
 	<?php if($_slider[0]->type!='intro') : ?>
     $.fn.sliderX.defaults = {
 		
@@ -479,6 +517,17 @@ jQuery(document).ready(function($){
 		Screenauto:false,
 		<?php
 		}
+		?>
+		<?php 
+				if(isset($params->repeat) and $params->repeat=='0'){
+				?>
+				repeat: false,
+				<?php
+				}else{
+				?>
+				repeat: true,
+				<?php
+				}
 		?>
 		<?php 
 				if(isset($params->herorestart) and $params->herorestart==0){
@@ -555,7 +604,7 @@ jQuery(document).ready(function($){
 			//alert("i am changing..");
 		}
     };   
-        jQuery('#particles-js<?php echo intval($_id); ?>').sliderX();
+        
 	
 	<?php else: ?>
 		$('#particles-js<?php echo intval($_id); ?>').changeWords({
@@ -1244,7 +1293,50 @@ var mainId = '<?php echo "particles-js".intval($_id); ?>';
 $customjs = get_option( 'sh_plugin_options' );
 echo $customjs['sh_custom_js'];
 ?>
+<?php //youtube video background
+if(isset($params->video)&& $params->video=='youtube'): 
+	if(isset($params->bg_video_youtube)&& $params->bg_video_youtube!=''):
+?>
+var player;
 
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('hero_youtube_video', {
+        width: 600,
+        height: 400,
+        videoId: '<?php echo $params->bg_video_youtube; ?>',
+        playerVars: {
+            color: 'white',
+			autoplay: 1,
+			controls: 0,
+			rel: 0,
+			showinfo: 0,
+			loop: 0,
+			modestbranding: 1,
+			
+        },
+		
+        events: {
+            onReady: initialize,
+			onStateChange: onPlayerStateChange
+        }
+    });
+}
+function initialize(event){
+	event.target.playVideo();
+}
+
+function onPlayerStateChange(event) {
+	//console.log(player.getPlayerState())
+}
+
+<?php 
+	endif;
+endif;
+?>
+jQuery(window).load(function(){
+	
+	jQuery('#particles-js<?php echo intval($_id); ?>').sliderX();
+})
 
 </script>
 

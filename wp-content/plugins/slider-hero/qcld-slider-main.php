@@ -3,7 +3,7 @@
 * Plugin Name: Slider Hero
 * Plugin URI: https://wordpress.org/plugins/slider-hero
 * Description: Slider Hero is a Unique Hero Slider Plugin with Background Animation Effects & Website Intro Builder. Create INCREDIBLE Adverts, Animation Slider Carousels, Animated Header with Text Carousel.
-* Version: 4.1.0
+* Version: 4.5.0
 * Author: QuantumCloud
 * Author URI: https://www.quantumcloud.com/
 * Requires at least: 4.0
@@ -103,7 +103,11 @@ function qcld_sliderhero_admin_style_script($hook){
 	wp_enqueue_style( 'qcld_slider_hero_css', QCLD_sliderhero_CSS . "/slider_hero.css");
 		wp_enqueue_script( 'qcld_hero_particles_js', QCLD_sliderhero_js . '/particles.js', array(), false, false );
 	wp_enqueue_script( 'qcld_hero_particles_app_js', QCLD_sliderhero_js . "/particle_app.js", array('jquery'),$ver = false, $in_footer = false);
+	
 	wp_enqueue_script( 'qcld_hero_slider_app_js', QCLD_sliderhero_js . "/jquery.slider_x.js", array('jquery'));
+	
+	
+	
 	wp_enqueue_script( 'qcld_hero_slider_changeword_js', QCLD_sliderhero_js . "/jquery.changethewords2.js", array('jquery'));
 		if ( ! wp_script_is( "thickbox" ) ) {
 			add_thickbox();
@@ -917,4 +921,15 @@ function qcld_sliderhero_ajax_action_callback() {
 add_action('admin_enqueue_scripts', 'qc_slider_hero_admin_css');
 function qc_slider_hero_admin_css(){
 	wp_enqueue_style( 'qcpnd-slider_hero-custom-css', QCLD_sliderhero_CSS . '/admin_style.css');
+}
+
+add_action( 'admin_menu' , 'qc_hero_help_link_submenu', 20 );
+function qc_hero_help_link_submenu(){
+	global $submenu;
+	
+	$link_text = "Help";
+	$submenu["Slider-Hero"][250] = array( $link_text, 'activate_plugins' , admin_url('admin.php?page=sh-options-page#section_help') );
+	ksort($submenu["Slider-Hero"]);
+	
+	return ($submenu);
 }

@@ -20,6 +20,16 @@ function sliderhero_ot_version_text_custom()
 	return $text;
 }
 
+
+  add_action( 'admin_bar_menu', 'sh_remove_wp_nodes', 9999 );
+  function sh_remove_wp_nodes() 
+  {
+      global $wp_admin_bar;   
+      $wp_admin_bar->remove_node( 'ot-theme-options' );
+      
+  }
+
+
 /**
  * Hook to register admin pages 
  */

@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: dist/visual-portfolio/class-visual-portfolio.php:265
+#: dist/visual-portfolio/class-visual-portfolio.php:280
 msgid "Small (VP)"
 msgstr ""
 
-#: dist/visual-portfolio/class-visual-portfolio.php:266
+#: dist/visual-portfolio/class-visual-portfolio.php:281
 msgid "Medium (VP)"
 msgstr ""
 
-#: dist/visual-portfolio/class-visual-portfolio.php:267
+#: dist/visual-portfolio/class-visual-portfolio.php:282
 msgid "Large (VP)"
 msgstr ""
 
-#: dist/visual-portfolio/class-visual-portfolio.php:268
+#: dist/visual-portfolio/class-visual-portfolio.php:283
 msgid "Extra Large (VP)"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Portfolio Categories"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:238, dist/visual-portfolio/classes/class-controls.php:551
+#: dist/visual-portfolio/classes/class-admin.php:238, dist/visual-portfolio/classes/class-controls.php:590
 msgid "Categories"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Search Portfolio Layout"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:337, dist/visual-portfolio/classes/class-controls.php:563
+#: dist/visual-portfolio/classes/class-admin.php:337, dist/visual-portfolio/classes/class-controls.php:602
 msgid "Video"
 msgstr ""
 
@@ -167,7 +167,7 @@ msgstr ""
 msgid "Thumbnail"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:559, dist/visual-portfolio/classes/class-admin.php:1842
+#: dist/visual-portfolio/classes/class-admin.php:559, dist/visual-portfolio/classes/class-admin.php:2053
 msgid "Shortcode"
 msgstr ""
 
@@ -175,7 +175,7 @@ msgstr ""
 msgid "Tiles"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:630
+#: dist/visual-portfolio/classes/class-admin.php:630, dist/visual-portfolio/classes/class-admin.php:1560
 msgid "Type"
 msgstr ""
 
@@ -183,472 +183,472 @@ msgstr ""
 msgid "Select tiles type"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:726
+#: dist/visual-portfolio/classes/class-admin.php:750
 msgid "Masonry"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:730
+#: dist/visual-portfolio/classes/class-admin.php:754
 msgid "Columns"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:741
+#: dist/visual-portfolio/classes/class-admin.php:765
 msgid "Justified"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:745
+#: dist/visual-portfolio/classes/class-admin.php:769
 msgid "Row height"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:753
+#: dist/visual-portfolio/classes/class-admin.php:777
 msgid "Row height tolerance"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:765
+#: dist/visual-portfolio/classes/class-admin.php:789
 msgid "Slider"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:769
+#: dist/visual-portfolio/classes/class-admin.php:793
 msgid "Effect"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:773
+#: dist/visual-portfolio/classes/class-admin.php:797
 msgid "Slide"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:774
+#: dist/visual-portfolio/classes/class-admin.php:798
 msgid "Coverflow"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:775, dist/visual-portfolio/classes/class-admin.php:1109
+#: dist/visual-portfolio/classes/class-admin.php:799, dist/visual-portfolio/classes/class-admin.php:1157
 msgid "Fade"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:780
+#: dist/visual-portfolio/classes/class-admin.php:804
 msgid "Speed (seconds)"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:789
+#: dist/visual-portfolio/classes/class-admin.php:813
 msgid "Autoplay (seconds)"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:798
+#: dist/visual-portfolio/classes/class-admin.php:822
 msgid "Items height"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:802, dist/visual-portfolio/classes/class-admin.php:841
+#: dist/visual-portfolio/classes/class-admin.php:826, dist/visual-portfolio/classes/class-admin.php:865
 msgid "Auto"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:803
+#: dist/visual-portfolio/classes/class-admin.php:827
 msgid "Static (px)"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:804
+#: dist/visual-portfolio/classes/class-admin.php:828
 msgid "Dynamic (%)"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:837
+#: dist/visual-portfolio/classes/class-admin.php:861
 msgid "Slides per view"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:842
+#: dist/visual-portfolio/classes/class-admin.php:866
 msgid "Custom"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:873
+#: dist/visual-portfolio/classes/class-admin.php:897
 msgid "Centered slides"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:886
+#: dist/visual-portfolio/classes/class-admin.php:910
 msgid "Loop"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:892
+#: dist/visual-portfolio/classes/class-admin.php:916
 msgid "Free scroll"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:898, dist/visual-portfolio/classes/class-admin.php:1491, dist/visual-portfolio/classes/class-settings.php:139
+#: dist/visual-portfolio/classes/class-admin.php:922, dist/visual-portfolio/classes/class-admin.php:1628, dist/visual-portfolio/classes/class-settings.php:139
 msgid "Show arrows"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:906, dist/visual-portfolio/classes/class-admin.php:907
+#: dist/visual-portfolio/classes/class-admin.php:930, dist/visual-portfolio/classes/class-admin.php:931, dist/visual-portfolio/classes/class-admin.php:1650, dist/visual-portfolio/classes/class-admin.php:1651
 msgid "Prev arrow icon"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:919, dist/visual-portfolio/classes/class-admin.php:920
+#: dist/visual-portfolio/classes/class-admin.php:943, dist/visual-portfolio/classes/class-admin.php:944, dist/visual-portfolio/classes/class-admin.php:1675, dist/visual-portfolio/classes/class-admin.php:1676
 msgid "Next arrow icon"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:930
+#: dist/visual-portfolio/classes/class-admin.php:954
 msgid "Show bullets"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:936
+#: dist/visual-portfolio/classes/class-admin.php:960
 msgid "Dynamic bullets"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:999
+#: dist/visual-portfolio/classes/class-admin.php:1023
 msgid "Gap"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1011
+#: dist/visual-portfolio/classes/class-admin.php:1035
 msgid "Items per page"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1023
+#: dist/visual-portfolio/classes/class-admin.php:1047
 msgid "Stretch"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1026
+#: dist/visual-portfolio/classes/class-admin.php:1050
 msgid "Break container and display it wide"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1037, dist/visual-portfolio/classes/class-admin.php:1345
+#: dist/visual-portfolio/classes/class-admin.php:1061, dist/visual-portfolio/classes/class-admin.php:1405, dist/visual-portfolio/classes/class-admin.php:1506
 msgid "Default"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1051
+#: dist/visual-portfolio/classes/class-admin.php:1075
 msgid "Fly"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1063, dist/visual-portfolio/classes/class-admin.php:1092, dist/visual-portfolio/classes/class-admin.php:1121
+#: dist/visual-portfolio/classes/class-admin.php:1087, dist/visual-portfolio/classes/class-admin.php:1128, dist/visual-portfolio/classes/class-admin.php:1169
 msgid "Overlay background color"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1070, dist/visual-portfolio/classes/class-admin.php:1099, dist/visual-portfolio/classes/class-admin.php:1128
+#: dist/visual-portfolio/classes/class-admin.php:1100, dist/visual-portfolio/classes/class-admin.php:1141, dist/visual-portfolio/classes/class-admin.php:1182
 msgid "Overlay text color"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1080
+#: dist/visual-portfolio/classes/class-admin.php:1116
 msgid "Emerge"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1164
+#: dist/visual-portfolio/classes/class-admin.php:1224
 msgid "Show title"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1172
+#: dist/visual-portfolio/classes/class-admin.php:1232
 msgid "Show categories"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1178
+#: dist/visual-portfolio/classes/class-admin.php:1238
 msgid "Categories count"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1193
+#: dist/visual-portfolio/classes/class-admin.php:1253
 msgid "Show date"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1197
+#: dist/visual-portfolio/classes/class-admin.php:1257
 msgid "False"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1198
+#: dist/visual-portfolio/classes/class-admin.php:1258
 msgid "Show"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1199
+#: dist/visual-portfolio/classes/class-admin.php:1259
 msgid "Human Format"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1207
+#: dist/visual-portfolio/classes/class-admin.php:1267
 msgid ""
 "Date format \n"
 " Example: F j, Y"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1219
+#: dist/visual-portfolio/classes/class-admin.php:1279
 msgid "Show excerpt"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1225
+#: dist/visual-portfolio/classes/class-admin.php:1285
 msgid "Excerpt words count"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1240
+#: dist/visual-portfolio/classes/class-admin.php:1300
 msgid "Show icon"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1248, dist/visual-portfolio/classes/class-admin.php:1249
+#: dist/visual-portfolio/classes/class-admin.php:1308, dist/visual-portfolio/classes/class-admin.php:1309
 msgid "Standard icon"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1261, dist/visual-portfolio/classes/class-admin.php:1262
+#: dist/visual-portfolio/classes/class-admin.php:1321, dist/visual-portfolio/classes/class-admin.php:1322
 msgid "Video icon"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1274
+#: dist/visual-portfolio/classes/class-admin.php:1334
 msgid "Caption align"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1327, dist/visual-portfolio/classes/class-admin.php:1339, dist/visual-portfolio/classes/class-admin.php:1444
+#: dist/visual-portfolio/classes/class-admin.php:1387, dist/visual-portfolio/classes/class-admin.php:1399, dist/visual-portfolio/classes/class-admin.php:1500
 msgid "Disabled"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1328, dist/visual-portfolio/classes/class-controls.php:580
+#: dist/visual-portfolio/classes/class-admin.php:1388, dist/visual-portfolio/classes/class-controls.php:619
 msgid "URL"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1329, dist/visual-portfolio/classes/class-settings.php:104
+#: dist/visual-portfolio/classes/class-admin.php:1389, dist/visual-portfolio/classes/class-settings.php:104
 msgid "Popup Gallery"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1400, dist/visual-portfolio/classes/class-admin.php:1470
+#: dist/visual-portfolio/classes/class-admin.php:1460, dist/visual-portfolio/classes/class-admin.php:1602
 msgid "Align"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1404, dist/visual-portfolio/classes/class-admin.php:1474, dist/visual-portfolio/classes/class-controls.php:490, dist/visual-portfolio/classes/class-controls.php:499, dist/visual-portfolio/classes/class-controls.php:503, dist/visual-portfolio/classes/class-controls.php:516
+#: dist/visual-portfolio/classes/class-admin.php:1464, dist/visual-portfolio/classes/class-admin.php:1606, dist/visual-portfolio/classes/class-controls.php:529, dist/visual-portfolio/classes/class-controls.php:538, dist/visual-portfolio/classes/class-controls.php:542, dist/visual-portfolio/classes/class-controls.php:555
 msgid "Center"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1405, dist/visual-portfolio/classes/class-admin.php:1475, dist/visual-portfolio/classes/class-controls.php:493, dist/visual-portfolio/classes/class-controls.php:506, dist/visual-portfolio/classes/class-controls.php:519
+#: dist/visual-portfolio/classes/class-admin.php:1465, dist/visual-portfolio/classes/class-admin.php:1607, dist/visual-portfolio/classes/class-controls.php:532, dist/visual-portfolio/classes/class-controls.php:545, dist/visual-portfolio/classes/class-controls.php:558
 msgid "Left"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1406, dist/visual-portfolio/classes/class-admin.php:1476, dist/visual-portfolio/classes/class-controls.php:496, dist/visual-portfolio/classes/class-controls.php:509, dist/visual-portfolio/classes/class-controls.php:522
+#: dist/visual-portfolio/classes/class-admin.php:1466, dist/visual-portfolio/classes/class-admin.php:1608, dist/visual-portfolio/classes/class-controls.php:535, dist/visual-portfolio/classes/class-controls.php:548, dist/visual-portfolio/classes/class-controls.php:561
 msgid "Right"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1421
+#: dist/visual-portfolio/classes/class-admin.php:1481
 msgid "Show count"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1445
+#: dist/visual-portfolio/classes/class-admin.php:1565
 msgid "Paged"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1446, dist/visual-portfolio/templates/items-list/pagination/infinite.php:18
+#: dist/visual-portfolio/classes/class-admin.php:1566, dist/visual-portfolio/templates/items-list/pagination/infinite.php:18
 msgid "Load More"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1447
+#: dist/visual-portfolio/classes/class-admin.php:1567
 msgid "Infinite"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1455
+#: dist/visual-portfolio/classes/class-admin.php:1582
 msgid "Note: you will see the \"Load More\" pagination in the preview. \"Infinite\" pagination will be visible on the site."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1506
+#: dist/visual-portfolio/classes/class-admin.php:1698
 msgid "Show numbers"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1551
+#: dist/visual-portfolio/classes/class-admin.php:1762
 msgid "Data source"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1563
+#: dist/visual-portfolio/classes/class-admin.php:1774
 msgid "Specific posts"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1584
+#: dist/visual-portfolio/classes/class-admin.php:1795
 msgid "Excluded posts"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1612
+#: dist/visual-portfolio/classes/class-admin.php:1823
 msgid "Custom query"
 msgstr ""
 
 #. translators: %1$s - escaped url.
-#: dist/visual-portfolio/classes/class-admin.php:1614
+#: dist/visual-portfolio/classes/class-admin.php:1825
 msgid "Build custom query according to <a href=\"%1$s\">WordPress Codex</a>."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1640
+#: dist/visual-portfolio/classes/class-admin.php:1851
 msgid "Taxonomies"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1667
+#: dist/visual-portfolio/classes/class-admin.php:1878
 msgid "Taxonomies relation"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1671
+#: dist/visual-portfolio/classes/class-admin.php:1882
 msgid "OR"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1672
+#: dist/visual-portfolio/classes/class-admin.php:1883
 msgid "AND"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1693
+#: dist/visual-portfolio/classes/class-admin.php:1904
 msgid "Order by"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1697
+#: dist/visual-portfolio/classes/class-admin.php:1908
 msgid "Date"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1698, dist/visual-portfolio/classes/class-controls.php:541
+#: dist/visual-portfolio/classes/class-admin.php:1909, dist/visual-portfolio/classes/class-controls.php:580
 msgid "Title"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1699
+#: dist/visual-portfolio/classes/class-admin.php:1910
 msgid "ID"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1700
+#: dist/visual-portfolio/classes/class-admin.php:1911
 msgid "Random"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1709
+#: dist/visual-portfolio/classes/class-admin.php:1920
 msgid "Order direction"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1713
+#: dist/visual-portfolio/classes/class-admin.php:1924
 msgid "DESC"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1714
+#: dist/visual-portfolio/classes/class-admin.php:1925
 msgid "ASC"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1749
+#: dist/visual-portfolio/classes/class-admin.php:1960
 msgid "Name & Shortcode"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1757
+#: dist/visual-portfolio/classes/class-admin.php:1968
 msgid "Layout"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1765
+#: dist/visual-portfolio/classes/class-admin.php:1976
 msgid "Items Style"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1773
+#: dist/visual-portfolio/classes/class-admin.php:1984
 msgid "Items Click Action"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1781
+#: dist/visual-portfolio/classes/class-admin.php:1992
 msgid "Filter"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1789
+#: dist/visual-portfolio/classes/class-admin.php:2000
 msgid "Pagination"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1798
+#: dist/visual-portfolio/classes/class-admin.php:2009
 msgid "Preview"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1806
+#: dist/visual-portfolio/classes/class-admin.php:2017
 msgid "Content Source"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1814
+#: dist/visual-portfolio/classes/class-admin.php:2025
 msgid "Custom CSS"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1833
+#: dist/visual-portfolio/classes/class-admin.php:2044
 msgid "Name"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1843
+#: dist/visual-portfolio/classes/class-admin.php:2054
 msgid "Place the shortcode where you want to show the portfolio list."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1905
+#: dist/visual-portfolio/classes/class-admin.php:2120
 msgid "Filter Shortcode"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1906
+#: dist/visual-portfolio/classes/class-admin.php:2121
 msgid "Place the shortcode where you want to show the filter."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1973
+#: dist/visual-portfolio/classes/class-admin.php:2188
 msgid "Portfolio"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1979
+#: dist/visual-portfolio/classes/class-admin.php:2194
 msgid "Post-Based"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:1985
+#: dist/visual-portfolio/classes/class-admin.php:2200
 msgid "Images"
 msgstr ""
 
 #. translators: %1$s - escaped url.
-#: dist/visual-portfolio/classes/class-admin.php:2004
+#: dist/visual-portfolio/classes/class-admin.php:2219
 msgid "Portfolio items list from <a href=\"%1$s\" target=\"_blank\">%2$s</a>"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2040
+#: dist/visual-portfolio/classes/class-admin.php:2255
 msgid "Available classes:"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2043
+#: dist/visual-portfolio/classes/class-admin.php:2258
 msgid " - use this classname for each styles you added. It is the main Visual Portfolio wrapper."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2044
+#: dist/visual-portfolio/classes/class-admin.php:2259
 msgid " - items wrapper."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2045
+#: dist/visual-portfolio/classes/class-admin.php:2260
 msgid " - single item wrapper."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2046
+#: dist/visual-portfolio/classes/class-admin.php:2261
 msgid " - filter wrapper."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2047
+#: dist/visual-portfolio/classes/class-admin.php:2262
 msgid " - pagination wrapper."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2107
+#: dist/visual-portfolio/classes/class-admin.php:2322
 msgid "Specific Posts"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-admin.php:2108
+#: dist/visual-portfolio/classes/class-admin.php:2323
 msgid "Custom Query"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:488
+#: dist/visual-portfolio/classes/class-controls.php:527
 msgid "Top"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:514
+#: dist/visual-portfolio/classes/class-controls.php:553
 msgid "Bottom"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:546
+#: dist/visual-portfolio/classes/class-controls.php:585
 msgid "Description"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:558
+#: dist/visual-portfolio/classes/class-controls.php:597
 msgid "Format"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:562
+#: dist/visual-portfolio/classes/class-controls.php:601
 msgid "Standard"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:568
+#: dist/visual-portfolio/classes/class-controls.php:607
 msgid "Video URL"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:569, dist/visual-portfolio/classes/class-controls.php:582
+#: dist/visual-portfolio/classes/class-controls.php:608, dist/visual-portfolio/classes/class-controls.php:621
 msgid "https://..."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:581
+#: dist/visual-portfolio/classes/class-controls.php:620
 msgid "By default used full image url, you can use custom one"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-controls.php:599
+#: dist/visual-portfolio/classes/class-controls.php:638
 msgid "Edit"
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-get-portfolio.php:188
+#: dist/visual-portfolio/classes/class-get-portfolio.php:192
 msgid "No items found."
 msgstr ""
 
-#: dist/visual-portfolio/classes/class-get-portfolio.php:929
+#: dist/visual-portfolio/classes/class-get-portfolio.php:958
 msgid "All"
 msgstr ""
 
 #. translators: %s - published in human format.
-#: dist/visual-portfolio/classes/class-get-portfolio.php:999
+#: dist/visual-portfolio/classes/class-get-portfolio.php:1043
 msgid "%s ago"
 msgstr ""
 

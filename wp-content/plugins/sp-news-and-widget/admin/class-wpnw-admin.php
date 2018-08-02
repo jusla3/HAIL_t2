@@ -21,6 +21,9 @@ class Wpnw_Admin {
 		
 		// Init Processes
 		add_action( 'admin_init', array($this, 'wpnw_admin_init_process') );
+
+		// Filter to add row action in category table
+		add_filter( WPNW_CAT.'_row_actions', array($this, 'wpnw_add_tax_row_data'), 10, 2 );
 	}
 
 	/**
@@ -70,6 +73,17 @@ class Wpnw_Admin {
 	    	set_transient( 'wpnw_install_notice', true, 604800 );
 	    }
 	}
+
+	/**
+	 * Function to add category row action
+	 * 
+	 * @package WP News and Scrolling Widgets
+	 * @since 1.0
+	 */
+	function wpnw_add_tax_row_data( $actions, $tag ) {
+		return array_merge( array( 'wpnw_id' => "<span style='color:#555'>ID: {$tag->term_id}</span>" ), $actions );
+	}
+
 }
 
 $wpnw_Admin = new Wpnw_Admin();

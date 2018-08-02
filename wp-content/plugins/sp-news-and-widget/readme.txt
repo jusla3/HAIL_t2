@@ -1,8 +1,8 @@
 === WP News and Scrolling Widgets  ===
-Contributors: wponlinesupport, anoopranawat
+Contributors: wponlinesupport, anoopranawat, pratik-jain
 Tags: wponlinesupport, wordpress news plugin, news website, main news page scrolling , wordpress vertical news plugin widget, wordpress horizontal news plugin widget , Free scrolling news wordpress plugin, Free scrolling news widget wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
 Requires at least: 3.5
-Tested up to: 4.9.6
+Tested up to: 4.9.7
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -113,7 +113,7 @@ first select "Default" and save then again select "Custom Structure "  and save.
 > <code><?php echo do_shortcode('[wpnw_gridbox_slider]'); ?> </code> 
 > <code> <?php echo do_shortcode('[wpnw_news_ticker]'); ?> </code>  
 >
-> View [PRO DEMO and Features](http://wponlinesupport.com/wp-plugin/sp-news-and-scrolling-widgets/) for additional information.
+> View [PRO DEMO and Features](https://www.wponlinesupport.com/wp-plugin/sp-news-and-scrolling-widgets/) for additional information.
 >
 > View [Masonry Add-on](http://wponlinesupport.com/wordpress-plugin-addon/masonry-addon-wp-news-widgets/) with 12 designs and 7 effects.
 >
@@ -161,6 +161,11 @@ Yse  <code> [sp_news] </code>
 7. Widgets Options
 
 == Changelog ==
+
+= 4.0.3 (27, Jul 2018) =
+* [*] Fix - Added missing translated string.
+* [*] Fix - Some warnings with widgets while using with WordPress customizer.
+* [*] Tweak - Used 'wp_reset_postdata' instead of 'wp_reset_query'.
 
 = 4.0.2 (04 June 2018) =
 * [*] Follow some WordPress Detailed Plugin Guidelines.

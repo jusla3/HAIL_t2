@@ -76,11 +76,12 @@ class Visual_Portfolio_Get {
      * Check if portfolio showed in preview mode.
      */
     public static function is_preview() {
-        $frame = get_query_var( 'vp_preview_frame' );
-        $id = get_query_var( 'vp_preview_frame_id' );
-        $pagename = get_query_var( 'vp_preview' );
+        // phpcs:disable
+        $frame = isset( $_GET['vp_preview_frame'] ) ? esc_attr( wp_unslash( $_GET['vp_preview_frame'] ) ) : false;
+        $id = isset( $_GET['vp_preview_frame_id'] ) ? esc_attr( wp_unslash( $_GET['vp_preview_frame_id'] ) ) : false;
+        // phpcs:enable
 
-        return 'vp_preview' === $pagename && 'true' === $frame && $id;
+        return 'true' === $frame && $id;
     }
 
     /**
@@ -164,6 +165,9 @@ class Visual_Portfolio_Get {
         }
 
         $start_page = self::get_current_page_number();
+
+        // stupid hack as wp_reset_postdata() function is not working for me...
+        $old_post = $GLOBALS['post'];
 
         $is_images = 'images' === $options['vp_content_source'];
         if ( $is_images ) {
@@ -261,9 +265,9 @@ class Visual_Portfolio_Get {
             <?php
             foreach ( $data_atts as $name => $data ) {
                 if ( 'data-vp-next-page-url' === $name ) {
-                    echo esc_html( $name ) . '="' . esc_url( $data ) . '"';
+                    echo esc_html( $name ) . '="' . esc_url( $data ) . '" ';
                 } else {
-                    echo esc_html( $name ) . '="' . esc_attr( $data ) . '"';
+                    echo esc_html( $name ) . '="' . esc_attr( $data ) . '" ';
                 }
             }
             ?>
@@ -292,14 +296,11 @@ class Visual_Portfolio_Get {
         self::filter( $options );
 
         // Insert styles.
-        switch ( $options['vp_items_style'] ) {
-            case 'default':
-                visual_portfolio()->include_template_style( 'visual-portfolio-items-style-default', 'items-list/items-style/style' );
-                break;
-            default:
-                visual_portfolio()->include_template_style( 'visual-portfolio-items-style-' . $options['vp_items_style'], 'items-list/items-style/' . $options['vp_items_style'] . '/style' );
-                break;
+        $items_style_pref = '';
+        if ( 'default' !== $options['vp_items_style'] ) {
+            $items_style_pref = '/' . $options['vp_items_style'];
         }
+        visual_portfolio()->include_template_style( 'visual-portfolio-items-style-' . $options['vp_items_style'], 'items-list/items-style' . $items_style_pref . '/style' );
         ?>
 
         <div class="vp-portfolio__items-wrap">
@@ -309,6 +310,7 @@ class Visual_Portfolio_Get {
                     'url'             => '',
                     'title'           => '',
                     'excerpt'         => '',
+                    'comments_number' => '',
                     'format'          => '',
                     'published'       => '',
                     'published_time'  => '',
@@ -317,13 +319,18 @@ class Visual_Portfolio_Get {
                     'image_id'        => '',
                     'image_allowed_html' => array(
                         'img' => array(
-                            'src'     => array(),
-                            'srcset'  => array(),
-                            'sizes'   => array(),
-                            'alt'     => array(),
-                            'class'   => array(),
-                            'width'   => array(),
-                            'height'  => array(),
+                            'src'    => array(),
+                            'srcset' => array(),
+                            'sizes'  => array(),
+                            'alt'    => array(),
+                            'class'  => array(),
+                            'width'  => array(),
+                            'height' => array(),
+
+                            // Lazyload support.
+                            'data-vpf-src'    => array(),
+                            'data-vpf-sizes'  => array(),
+                            'data-vpf-srcset' => array(),
                         ),
                     ),
                     'img_size_popup'  => $img_size_popup,
@@ -387,7 +394,7 @@ class Visual_Portfolio_Get {
 
                         self::each_item( $args );
                     }
-                } else if ( isset( $portfolio_query ) && $portfolio_query->have_posts() ) {
+                } else if ( isset( $portfolio_query ) ) {
                     while ( $portfolio_query->have_posts() ) {
                         $portfolio_query->the_post();
 
@@ -437,6 +444,8 @@ class Visual_Portfolio_Get {
                             'categories'      => $categories,
                         ) );
 
+                        $args['comments_number'] = get_comments_number();
+
                         // Excerpt.
                         if ( isset( $args['opts']['show_excerpt'] ) && $args['opts']['show_excerpt'] ) {
                             $args['excerpt'] = wp_trim_words( do_shortcode( has_excerpt() ? get_the_excerpt() : get_the_content() ), $args['opts']['excerpt_words_count'], '...' );
@@ -452,7 +461,7 @@ class Visual_Portfolio_Get {
                         self::each_item( $args );
                     }
 
-                    wp_reset_postdata();
+                    $portfolio_query->reset_postdata();
                 }
 
                 ?>
@@ -471,6 +480,17 @@ class Visual_Portfolio_Get {
 
         <?php
 
+        // Add controls styles.
+        if ( $options['vp_controls_styles'] ) {
+            $controls_css_handle = 'vp-controls-styles-' . $atts['id'];
+            $css = wp_kses( $options['vp_controls_styles'], array( '\'', '\"' ) );
+            $css = str_replace( '&gt;', '>', $css );
+
+            wp_register_style( $controls_css_handle, false );
+            wp_enqueue_style( $controls_css_handle );
+            wp_add_inline_style( $controls_css_handle, $css );
+        }
+
         // Add custom styles.
         if ( $options['vp_custom_css'] ) {
             $custom_css_handle = 'vp-custom-css-' . $atts['id'];
@@ -481,6 +501,10 @@ class Visual_Portfolio_Get {
             wp_enqueue_style( $custom_css_handle );
             wp_add_inline_style( $custom_css_handle, $css );
         }
+
+        // stupid hack as wp_reset_postdata() function is not working for me...
+        // phpcs:ignore
+        $GLOBALS['post'] = $old_post;
 
         $return = ob_get_contents();
         ob_end_clean();
@@ -851,38 +875,43 @@ class Visual_Portfolio_Get {
              */
             $term_ids = array();
             $term_taxonomies = array();
+
+            // stupid hack as wp_reset_postdata() function is not working for me...
+            $old_post = $GLOBALS['post'];
             $portfolio_query = new WP_Query( $query_opts );
-            if ( $portfolio_query->have_posts() ) {
-                while ( $portfolio_query->have_posts() ) {
-                    $portfolio_query->the_post();
-                    $all_taxonomies = get_object_taxonomies( get_post() );
+            while ( $portfolio_query->have_posts() ) {
+                $portfolio_query->the_post();
+                $all_taxonomies = get_object_taxonomies( get_post() );
 
-                    foreach ( $all_taxonomies as $cat ) {
-                        // allow only category taxonomies like category, portfolio_category, etc...
-                        // + support for jetpack portfolio-type.
-                        if ( strpos( $cat, 'category' ) === false && strpos( $cat, 'jetpack-portfolio-type' ) === false ) {
-                            continue;
+                foreach ( $all_taxonomies as $cat ) {
+                    // allow only category taxonomies like category, portfolio_category, etc...
+                    // + support for jetpack portfolio-type.
+                    if ( strpos( $cat, 'category' ) === false && strpos( $cat, 'jetpack-portfolio-type' ) === false ) {
+                        continue;
+                    }
+
+                    // Retrieve terms.
+                    $category = get_the_terms( get_post(), $cat );
+                    if ( ! $category ) {
+                        continue;
+                    }
+
+                    // Prepare each terms array.
+                    foreach ( $category as $key => $cat_item ) {
+                        if ( ! in_array( $cat_item->term_id, $term_ids ) ) {
+                            $term_ids[] = $cat_item->term_id;
                         }
-
-                        // Retrieve terms.
-                        $category = get_the_terms( get_post(), $cat );
-                        if ( ! $category ) {
-                            continue;
-                        }
-
-                        // Prepare each terms array.
-                        foreach ( $category as $key => $cat_item ) {
-                            if ( ! in_array( $cat_item->term_id, $term_ids ) ) {
-                                $term_ids[] = $cat_item->term_id;
-                            }
-                            if ( ! in_array( $cat_item->taxonomy, $term_taxonomies ) ) {
-                                $term_taxonomies[] = $cat_item->taxonomy;
-                            }
+                        if ( ! in_array( $cat_item->taxonomy, $term_taxonomies ) ) {
+                            $term_taxonomies[] = $cat_item->taxonomy;
                         }
                     }
                 }
-                wp_reset_postdata();
             }
+            $portfolio_query->reset_postdata();
+
+            // stupid hack as wp_reset_postdata() function is not working for me...
+            // phpcs:ignore
+            $GLOBALS['post'] = $old_post;
 
             // Get all available terms and then pick only needed by ID
             // we need this to support reordering plugins.
@@ -935,12 +964,29 @@ class Visual_Portfolio_Get {
             )
         );
 
+        // get options for the current filter.
+        $filter_options = array();
+        $filter_options_slug = 'vp_filter_' . $vp_options['vp_filter'] . '__';
+        foreach ( $vp_options as $k => $opt ) {
+            // add option to array.
+            if ( substr( $k, 0, strlen( $filter_options_slug ) ) === $filter_options_slug ) {
+                $opt_name = str_replace( $filter_options_slug, '', $k );
+                $filter_options[ $opt_name ] = $opt;
+            }
+
+            // remove style options from the options list.
+            if ( substr( $k, 0, strlen( $filter_options_slug ) ) === $filter_options_slug ) {
+                unset( $vp_options[ $k ] );
+            }
+        }
+
         $args = array(
             'class'    => 'vp-filter',
             'items'    => $terms,
             'align'    => $vp_options['vp_filter_align'],
             'show_count' => $vp_options['vp_filter_show_count'],
-            'vp_opts'   => $vp_options,
+            'opts'     => $filter_options,
+            'vp_opts'  => $vp_options,
         );
 
         if ( $vp_options['vp_filter_align'] ) {
@@ -951,16 +997,14 @@ class Visual_Portfolio_Get {
         <div class="vp-portfolio__filter-wrap">
         <?php
 
-        switch ( $vp_options['vp_filter'] ) {
-            case 'default':
-                visual_portfolio()->include_template( 'items-list/filter/filter', $args );
-                visual_portfolio()->include_template_style( 'visual-portfolio-filter-default', 'items-list/filter/style' );
-                break;
-            default:
-                visual_portfolio()->include_template( 'items-list/filter/' . $vp_options['vp_filter'] . '/filter', $args );
-                visual_portfolio()->include_template_style( 'visual-portfolio-filter-' . $vp_options['vp_filter'], 'items-list/filter/' . $vp_options['vp_filter'] . '/style' );
-                break;
+        $filter_style_pref = '';
+
+        if ( 'default' !== $vp_options['vp_filter'] ) {
+            $filter_style_pref = '/' . $vp_options['vp_filter'];
         }
+
+        visual_portfolio()->include_template( 'items-list/filter' . $filter_style_pref . '/filter', $args );
+        visual_portfolio()->include_template_style( 'visual-portfolio-filter-' . $vp_options['vp_filter'], 'items-list/filter' . $filter_style_pref . '/style' );
 
         ?>
         </div>
@@ -990,7 +1034,7 @@ class Visual_Portfolio_Get {
      */
     private static function each_item( $args ) {
         // prepare image.
-        $args['image'] = wp_get_attachment_image( $args['image_id'], $args['img_size'] );
+        $args['image'] = Visual_Portfolio_Images::get_attachment_image( $args['image_id'], $args['img_size'] );
 
         // prepare date.
         if ( isset( $args['opts']['show_date'] ) ) {
@@ -1061,7 +1105,7 @@ class Visual_Portfolio_Get {
 
         // No Image.
         if ( ! $args['image'] && $args['no_image'] ) {
-            $args['image'] = wp_get_attachment_image( $args['no_image'], $args['img_size'] );
+            $args['image'] = Visual_Portfolio_Images::get_attachment_image( $args['no_image'], $args['img_size'] );
         }
         ?>
 
@@ -1092,16 +1136,12 @@ class Visual_Portfolio_Get {
             ?>
             <div class="vp-portfolio__item">
                 <?php
-                switch ( $args['vp_opts']['vp_items_style'] ) {
-                    case 'default':
-                        visual_portfolio()->include_template( 'items-list/items-style/image', $args );
-                        visual_portfolio()->include_template( 'items-list/items-style/meta', $args );
-                        break;
-                    default:
-                        visual_portfolio()->include_template( 'items-list/items-style/' . $args['vp_opts']['vp_items_style'] . '/image', $args );
-                        visual_portfolio()->include_template( 'items-list/items-style/' . $args['vp_opts']['vp_items_style'] . '/meta', $args );
-                        break;
+                $items_style_pref = '';
+                if ( 'default' !== $args['vp_opts']['vp_items_style'] ) {
+                    $items_style_pref = '/' . $args['vp_opts']['vp_items_style'];
                 }
+                visual_portfolio()->include_template( 'items-list/items-style' . $items_style_pref . '/image', $args );
+                visual_portfolio()->include_template( 'items-list/items-style' . $items_style_pref . '/meta', $args );
                 ?>
             </div>
         </div>
@@ -1118,8 +1158,24 @@ class Visual_Portfolio_Get {
      *      'next_page_url'.
      */
     private static function pagination( $vp_options, $args ) {
-        if ( ! $vp_options['vp_pagination'] ) {
+        if ( ! $vp_options['vp_pagination_style'] || ! $vp_options['vp_pagination'] ) {
             return;
+        }
+
+        // get options for the current pagination.
+        $pagination_options = array();
+        $pagination_options_slug = 'vp_pagination_' . $vp_options['vp_pagination_style'] . '__';
+        foreach ( $vp_options as $k => $opt ) {
+            // add option to array.
+            if ( substr( $k, 0, strlen( $pagination_options_slug ) ) === $pagination_options_slug ) {
+                $opt_name = str_replace( $pagination_options_slug, '', $k );
+                $pagination_options[ $opt_name ] = $opt;
+            }
+
+            // remove style options from the options list.
+            if ( substr( $k, 0, strlen( $pagination_options_slug ) ) === $pagination_options_slug ) {
+                unset( $vp_options[ $k ] );
+            }
         }
 
         $args = array(
@@ -1129,7 +1185,8 @@ class Visual_Portfolio_Get {
             'max_pages'     => $args['max_pages'],
             'class'         => 'vp-pagination',
             'align'         => $vp_options['vp_pagination_align'],
-            'vp_opts'        => $vp_options,
+            'opts'          => $pagination_options,
+            'vp_opts'       => $vp_options,
         );
 
         if ( ! $args['next_page_url'] ) {
@@ -1144,10 +1201,16 @@ class Visual_Portfolio_Get {
         <div class="vp-portfolio__pagination-wrap">
         <?php
 
+        $pagination_style_pref = '';
+        if ( 'default' !== $vp_options['vp_pagination_style'] ) {
+            $pagination_style_pref = '/' . $vp_options['vp_pagination_style'];
+        }
+
         switch ( $vp_options['vp_pagination'] ) {
             case 'infinite':
             case 'load-more':
-                visual_portfolio()->include_template( 'items-list/pagination/' . $vp_options['vp_pagination'], $args );
+                visual_portfolio()->include_template( 'items-list/pagination' . $pagination_style_pref . '/' . $vp_options['vp_pagination'], $args );
+                visual_portfolio()->include_template_style( 'visual-portfolio-pagination-' . $vp_options['vp_pagination_style'], 'items-list/pagination' . $pagination_style_pref . '/style' );
                 break;
             default:
                 $pagination_links = paginate_links(
@@ -1217,7 +1280,12 @@ class Visual_Portfolio_Get {
 
                 if ( ! empty( $filtered_links ) ) {
                     $args['items'] = $filtered_links;
-                    visual_portfolio()->include_template( 'items-list/pagination/paged', $args );
+                    if ( $vp_options['vp_pagination_paged__show_arrows'] ) {
+                        $args['arrows_icon_prev'] = $vp_options['vp_pagination_paged__arrows_icon_prev'];
+                        $args['arrows_icon_next'] = $vp_options['vp_pagination_paged__arrows_icon_next'];
+                    }
+                    visual_portfolio()->include_template( 'items-list/pagination' . $pagination_style_pref . '/paged', $args );
+                    visual_portfolio()->include_template_style( 'visual-portfolio-pagination-' . $vp_options['vp_pagination_style'], 'items-list/pagination/style' );
                 }
 
                 break;
@@ -1226,15 +1294,13 @@ class Visual_Portfolio_Get {
         ?>
         </div>
         <?php
-
-        visual_portfolio()->include_template_style( 'visual-portfolio-pagination-default', 'items-list/pagination/style' );
     }
 
     /**
      * Return current url without page variables.
      *
-     * @param string $current_url - custom page url.
-     * @param array  $query_arg - custom query arg.
+     * @param string|boolean $current_url - custom page url.
+     * @param array          $query_arg - custom query arg.
      * @return string
      */
     private static function get_nopaging_url( $current_url = false, $query_arg = array() ) {

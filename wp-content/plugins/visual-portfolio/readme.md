@@ -4,7 +4,7 @@
 * Requires at least: 4.0.0
 * Tested up to: 4.9
 * Requires PHP: 5.4
-* Stable tag: 1.5.0
+* Stable tag: 1.6.2
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,8 +53,8 @@ See **Online Demo** here - [https://demo.nkdev.info/#visual-portfolio](https://d
 
 ## Real Examples ##
 
-[Piroll - Portfolio Theme](https://demo.nkdev.info/#piroll)
-[Snow - Portfolio Theme](https://demo.nkdev.info/#snow)
+* [Piroll - Portfolio Theme](https://demo.nkdev.info/#piroll)
+* [Snow - Portfolio Theme](https://demo.nkdev.info/#snow)
 
 
 
@@ -105,6 +105,7 @@ Available filters:
 * **vpf_enqueue_plugin_photoswipe**
 * **vpf_enqueue_plugin_swiper**
 * **vpf_enqueue_plugin_font_awesome**
+* **vpf_enqueue_plugin_font_lazysizes**
 
 Note: some functionality depends on these plugins and you may break the portfolio.
 
@@ -191,9 +192,26 @@ Available events:
     
     Note: Make sure that you added template in **your_theme/visual-portfolio/items-list/filter/new_filter**. See the structure of default templates to getting started.
 
+* **vpf_extend_pagination** [ $pagination ] - custom pagination.
+
+        add_filter( 'vpf_extend_pagination', 'my_pagination_vpf_extend_pagination' );
+
+        function my_pagination_vpf_extend_pagination( $pagination ) {
+            return array_merge( $pagination, array(
+                'new_pagination' => array(
+                    'title' => esc_html__( 'New Pagination', 'visual-portfolio' ),
+                    'controls' => array(
+                        ... controls (read below) ...
+                    ),
+                ),
+            ) );
+        }
+    
+    Note: Make sure that you added template in **your_theme/visual-portfolio/items-list/pagination/new_pagination**. See the structure of default templates to getting started.
+
 ### DEV: Controls. ####
 
-These controls you can use in filters to extend Portfolio options (read **DEV: WP filters.** in FAQ).
+These controls you can use in filers to extend Portfolio options (read **DEV: WP filters.** in FAQ).
 
 * The list of options, that available in all controls:
 
@@ -222,6 +240,14 @@ These controls you can use in filters to extend Portfolio options (read **DEV: W
                  *  'operator' - operator (==, !==, >, <, >=, <=).
                  *  'value' - condition value.
                  */
+            ),
+            
+            // custom styles.
+            'style'       => array(
+                array(
+                    'element'  => '.vp-portfolio__item-overlay',
+                    'property' => 'background-color',
+                ),
             ),
     
             'class'         => '',
@@ -363,17 +389,65 @@ Available events:
 * **addStyle.vpf** [ selector, styles, media, stylesList ] - called after added new custom styles.
 * **removeStyle.vpf** [ selector, styles, stylesList ] - called after removed custom styles.
 * **renderStyle.vpf** [ stylesString, stylesList, $style ] - called after rendered custom styles.
-* **imagesLoaded.vpf** - called after images loaded.
 * **initIsotope.vpf** - called after Isotope inited.
 * **destroyIsotope.vpf** - called after Isotope destroyed.
 * **initFjGallery.vpf** - called after fjGallery inited.
 * **destroyFjGallery.vpf** - called after fjGallery destroyed.
 
 
+### DEV: jQuery methods. ####
+
+Sometimes you may need to call Visual Portfolio methods manually, for example when you use AJAX page load, you will need to reinitialize portfolio, so you can use public methods. Example:
+
+    // Initialize.
+    $( '.vp-portfolio' ).vpf();
+
+    // Destroy.
+    $( '.vp-portfolio' ).vpf( 'destroy' );
+
+Available methods:
+
+* **init** - init/reinit portfolio
+* **destroy** - destroy portfolio
+* **resized** - portfolio was resized
+* **addStyle** [ selector, styles, media ] - add custom styles to the current portfolio
+* **removeStyle** [ selector, styles, media ] - remove custom styles from the current portfolio
+* **renderStyle** - render custom styles
+* **addItems** [ $items, removeExisting ] - add new items to portfolio (called after AJAX loading)
+* **removeItems** [ $items ] - remove some items from portfolio (called after AJAX loading in Paged pagination)
 
 
 
 ## Changelog ##
+
+= 1.6.2 =
+* additional check for isotope and fjGallery existence
+* added init outside of 'ready' event (possible faster initialization)
+* fixed lazyload possible conflict with the 3rd-party themes/plugins
+
+= 1.6.1 =
+* fixed validator error "The sizes attribute may be specified only if the srcset attribute is also present"
+
+= 1.6.0 =
+* NOTE: strongly recommend to regenerate thumbnails on your site using [this plugin](https://wordpress.org/plugins/regenerate-thumbnails/)
+* added lazy loading for images
+* added will-change styles in templates (animations should work smoother)
+* added new Tiles
+* added pagination paged arrows options
+* added align wide and full options in Gutenberg block
+* added support for custom controls styles (developers could create their own controls and add custom styles). Read FAQ for more information
+* added custom control options in filter templates (helpful for developers)
+* added pagination style and possibility to extend it from 3rd-party code
+* added portfolio item comments number data for templates
+* added 'resized' event for developers
+* always enqueued main style on all pages
+* changed carousel arrows shadow
+* fixed validation errors (added space between data attributes)
+* fixed video popup position
+* fixed portfolio bugged reload in preview
+* renamed nk-spinner to vp-spinner
+* removed double slash in custom theme template styles urls
+* removed imagesloaded usage
 
 = 1.5.0 =
 * added Slider (+ Carousel, Coverflow) layout

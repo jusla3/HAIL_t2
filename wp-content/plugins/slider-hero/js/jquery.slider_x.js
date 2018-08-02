@@ -107,6 +107,7 @@ function getOffset( el ) {
 		//getting slider data.
         slider.data('sliderXData', vars);
 		
+		
 		//mh code for image container
 
 		//mh code for title color & Font size
@@ -241,7 +242,15 @@ function getOffset( el ) {
 				 timer = setInterval(function(){ 
 					countercount++;
 					if(mhclicked==0){
-						slideExcute(slider, kids, settings, false); 
+						if(vars.currentSlide==vars.totalSlides){
+							if(settings.repeat!==false){
+								slideExcute(slider, kids, settings, false); 
+							}
+							
+						}else{
+							slideExcute(slider, kids, settings, false); 
+						}
+						
 					}
 					
 				 }, settings.pauseTime);
@@ -256,16 +265,27 @@ function getOffset( el ) {
 
         }
 		
+		
+		
+		
 		$('#hero_ge_restart_button').on('click', function(){
 			clearInterval(timer);
 			slideExcute(slider, kids, settings, 0);
 			slideloop();
+			if(typeof(player)!='undefined'){
+				player.seekTo(0);
+			}
 		})
 		
 		$('#hero_ge_pause_button').on('click', function(){
 			clearInterval(timer);
 			$(this).hide();
 			$('#hero_ge_play_button').show();
+			if(typeof(player)!='undefined'){
+				player.pauseVideo();
+			}
+			
+
 			
 		})
 		
@@ -274,8 +294,10 @@ function getOffset( el ) {
 			slideloop();
 			$(this).hide();
 			$('#hero_ge_pause_button').show();
-			
-			
+			if(typeof(player)!='undefined'){
+				player.playVideo();
+			}
+
 		})
 		
 		$(window).resize(function() {
@@ -349,8 +371,10 @@ function getOffset( el ) {
 			//if(typeof(currentSlide)!=='undefined')
 				
             // Trigger the slideshowEnd callback
-            if(vars.currentSlide === vars.totalSlides){
-                vars.currentSlide = 0;
+            if(typeof(vars.currentSlide)!=='undefined' && vars.currentSlide >= vars.totalSlides){
+
+				vars.currentSlide = 0;	
+
                 //settings.slideshowEnd.call(this);
             }
 			

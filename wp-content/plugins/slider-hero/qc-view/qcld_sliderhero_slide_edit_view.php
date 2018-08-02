@@ -475,11 +475,20 @@ function qcld_sliderhero_edit_slider_view( $_row, $_id, $_slider ) {
 											<option value="1" <?php echo (isset($params->stopslide)&& $params->stopslide==1?'selected="selected"':''); ?>>Off</option>
 										</select>
 									</div>
-									<div class="params customitemstyle">
-										<label class="customlevel" for="qchero-background-color" style="display: inline-block;">Slide Repeat <span class="hero_pro_features">[PRO]</span></label> 
-										<select disabled style="width: 96%;">
-											<option value="" >None</option>
+									<div class="params customitemstyle" >
+									
+										<label class="customlevel" for="qchero-caption-text-color" style="display: inline-block;">Slide Repeat</label> 
+										<select name="params[repeat]" style="width:90%">
 											
+											<?php 
+												if(isset($params->repeat) and $params->repeat=='1'){
+													echo '<option value="1" selected="selected">On</option>';
+													echo '<option value="0">Off</option>';
+												}else{
+													echo '<option value="1">On</option>';
+													echo '<option value="0" selected="selected">Off</option>';
+												}
+											?>
 										</select>
 									</div>
 									<div class="params customitemstyle" >
@@ -610,19 +619,22 @@ function qcld_sliderhero_edit_slider_view( $_row, $_id, $_slider ) {
 									</div>
 									
 									<div class="params deseffect">
-										<label class="customlevel" for="qcslide-effect-slideffect"><?php _e('Title Bottom Margin', 'qcslide'); ?><span class="hero_pro_features">[PRO]</span></label>
-										<input class="myElements" style="width: 96%;" type="text" disabled placeholder="Ex: 50px or 10%" />
+										<label class="customlevel" for="qcslide-effect-slideffect"><?php _e('Title Bottom Margin', 'qcslide'); ?></label>
+										<input class="myElements" style="width: 96%;" type="text" name="params[titlebottommargin]"
+												   value="<?php echo (isset($params->titlebottommargin) && $params->titlebottommargin!=''?esc_attr($params->titlebottommargin):''); ?>" placeholder="Ex: 50px or 10%" />
 
 									</div>
 									<div class="params deseffect">
-										<label class="customlevel" for="qcslide-effect-slideffect"><?php _e('Description Bottom Margin', 'qcslide'); ?><span class="hero_pro_features">[PRO]</span></label>
-										<input class="myElements" style="width: 96%;" type="text" disabled placeholder="Ex: 50px or 10%" />
+										<label class="customlevel" for="qcslide-effect-slideffect"><?php _e('Description Bottom Margin', 'qcslide'); ?></label>
+										<input class="myElements" style="width: 96%;" type="text" name="params[descriptionbottommargin]"
+												   value="<?php echo (isset($params->descriptionbottommargin) && $params->descriptionbottommargin!=''?esc_attr($params->descriptionbottommargin):''); ?>" placeholder="Ex: 50px or 10%" />
 										
 									</div>
 									
 									<div class="params deseffect">
-										<label class="customlevel" for="qcslide-effect-slideffect"><?php _e('Button Bottom Margin', 'qcslide'); ?><span class="hero_pro_features">[PRO]</span></label>
-										<input class="myElements" style="width: 96%;" type="text" disabled placeholder="Ex: 50px or 10%" />
+										<label class="customlevel" for="qcslide-effect-slideffect"><?php _e('Button Bottom Margin', 'qcslide'); ?></label>
+										<input class="myElements" style="width: 96%;" type="text" name="params[buttonbottommargin]"
+												   value="<?php echo (isset($params->buttonbottommargin) && $params->buttonbottommargin!=''?esc_attr($params->buttonbottommargin):''); ?>" placeholder="Ex: 50px or 10%" />
 										
 									</div>
 									
@@ -635,9 +647,10 @@ function qcld_sliderhero_edit_slider_view( $_row, $_id, $_slider ) {
 							<h2>Color & Background Section</h2>
 							<hr/>
 							
-							<div class="params othersetting" style="display: inline-block; float: left; width: 25%;">
-								<label class="customlevel" for="qchero-caption-text-color">Title Background Color <span class="hero_pro_features">[PRO]</span></label> <input type="text" name="" class="color-field myElements" value="" />
+							<div class="params customitemstyle">
+									<label class="customlevel" for="qchero-caption-text-color">Title Background Color</label> <input type="text" name="params[titlebgcolor]" class="color-field myElements" value="<?php echo (isset($params->titlebgcolor)?esc_attr($params->titlebgcolor):''); ?>" />
 							</div>
+							
 							<div class="params othersetting" style="display: inline-block; float: left; width: 25%;">
 								<label class="customlevel" for="qchero-caption-text-color">Title Color</label> <input type="text" name="params[titlecolor]" class="color-field myElements" value="<?php echo (isset($params->titlecolor)?esc_attr($params->titlecolor):''); ?>" />
 							</div>

@@ -199,6 +199,25 @@ if(isset($params->description->align) and $params->description->align!=''){
 <?php endif; ?>
 }
 #particles-js .slider-x-lead-title, #particles-js .hero_slider_btn, #particles-js .slider-x-item-title{margin: 30px 0px;}
+
+#particles-js<?php echo intval($_id); ?> .slider-x-lead-title{
+<?php if(isset($params->titlebottommargin)&&$params->titlebottommargin!=''): ?>
+	margin-bottom: <?php echo $params->titlebottommargin; ?>;
+<?php endif; ?>	
+}
+
+#particles-js<?php echo intval($_id); ?> .slider-x-item-title{
+<?php if(isset($params->descriptionbottommargin)&&$params->descriptionbottommargin!=''): ?>
+	margin-bottom: <?php echo $params->descriptionbottommargin; ?>;
+<?php endif; ?>	
+}
+
+#particles-js<?php echo intval($_id); ?> .hero_slider_btn{
+<?php if(isset($params->buttonbottommargin)&&$params->buttonbottommargin!=''): ?>
+	margin-bottom: <?php echo $params->buttonbottommargin; ?>;
+<?php endif; ?>	
+}
+
 </style>
 
 <?php 

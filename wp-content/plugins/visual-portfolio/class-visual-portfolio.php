@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Visual Portfolio
  * Description:  Portfolio post type with visual editor
- * Version:      1.5.0
+ * Version:      1.6.2
  * Author:       nK
  * Author URI:   https://nkdev.info
  * License:      GPLv2 or later
@@ -124,6 +124,7 @@ class Visual_Portfolio {
 
         // template_redirect is used instead of wp_enqueue_scripts just because some plugins use it and included an old isotope plugin. So, it was conflicted.
         add_action( 'template_redirect', array( $this, 'register_scripts' ), 9 );
+        add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts' ), 9 );
     }
 
     /**
@@ -156,7 +157,7 @@ class Visual_Portfolio {
 
         // fjGallery.
         if ( apply_filters( 'vpf_enqueue_plugin_flickr_justified_gallery', true ) ) {
-            wp_register_script( 'flickr-justified-gallery', visual_portfolio()->plugin_url . 'assets/vendor/flickr-justified-gallery/fjGallery.min.js', array( 'jquery' ), '1.0.1', true );
+            wp_register_script( 'flickr-justified-gallery', visual_portfolio()->plugin_url . 'assets/vendor/flickr-justified-gallery/fjGallery.min.js', array( 'jquery' ), '1.0.2', true );
 
             $vp_deps[] = 'flickr-justified-gallery';
         }
@@ -197,9 +198,16 @@ class Visual_Portfolio {
             $vp_deps[] = 'font-awesome-v4-shims';
         }
 
+        // LazySizes.
+        if ( apply_filters( 'vpf_enqueue_plugin_lazysizes', true ) ) {
+            wp_register_script( 'lazysizes', visual_portfolio()->plugin_url . 'assets/vendor/lazysizes/lazysizes.min.js', array( 'jquery' ), '4.0.4', true );
+
+            $vp_deps[] = 'lazysizes';
+        }
+
         // Visual Portfolio.
-        wp_register_script( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/js/script.min.js', $vp_deps, '1.5.0', true );
-        wp_register_style( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/css/style.min.css', $vp_style_deps, '1.5.0' );
+        wp_register_script( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/js/script.min.js', $vp_deps, '1.6.2', true );
+        wp_register_style( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/css/style.min.css', $vp_style_deps, '1.6.2' );
 
         // Visual Portfolio data.
         $data_init = array(
@@ -226,6 +234,13 @@ class Visual_Portfolio {
             ),
         );
         wp_localize_script( 'visual-portfolio', 'VPData', $data_init );
+    }
+
+    /**
+     * Enqueue main style to prevent first-page load layout issues if the page contains portfolio.
+     */
+    public function wp_enqueue_scripts() {
+        wp_enqueue_style( 'visual-portfolio' );
     }
 
     /**
@@ -275,6 +290,7 @@ class Visual_Portfolio {
      */
     private function include_dependencies() {
         require_once( $this->plugin_path . 'classes/class-extend.php' );
+        require_once( $this->plugin_path . 'classes/class-images.php' );
         require_once( $this->plugin_path . 'classes/class-settings.php' );
         require_once( $this->plugin_path . 'classes/class-rest.php' );
         require_once( $this->plugin_path . 'classes/class-get-portfolio.php' );
@@ -328,7 +344,7 @@ class Visual_Portfolio {
 
         if ( file_exists( get_stylesheet_directory() . '/visual-portfolio/' . $template_name . '.css' ) ) {
             // Child Theme (or just theme).
-            $template = trailingslashit( get_stylesheet_directory_uri() ) . '/visual-portfolio/' . $template_name . '.css';
+            $template = trailingslashit( get_stylesheet_directory_uri() ) . 'visual-portfolio/' . $template_name . '.css';
         } else if ( file_exists( get_template_directory() . '/visual-portfolio/' . $template_name . '.css' ) ) {
             // Parent Theme (if parent exists).
             $template = trailingslashit( get_template_directory_uri() ) . 'visual-portfolio/' . $template_name . '.css';

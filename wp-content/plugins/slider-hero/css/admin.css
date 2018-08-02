@@ -269,6 +269,7 @@ cursor:pointer;
     background:#000;
     color: #fff;
 	line-height: 35px;
+	margin: 0;
 }
 
 
@@ -2669,7 +2670,7 @@ div.tab button.active {
 }
 .hero_pro_effects .unlink-pro p span {
 	position: absolute;
-	top: -111px;
+	top: -109px;
 	right: 0;
 	background: #fed018;
 	padding: 0px 7px;
@@ -2710,6 +2711,7 @@ div.tab button.active {
 	background: #000;
 	color: #fff;
 	line-height: 35px;
+	    margin: 0px;
 }
 .hero_pro_effects .unlink-pro img {
 	width: 100%;

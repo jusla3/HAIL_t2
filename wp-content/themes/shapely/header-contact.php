@@ -45,8 +45,8 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 	<script src="/wp-content/themes/shapely/assets/js/script0.js"></script>
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<!-------------------Testing PoUp JS-->
-
-	<?php wp_head(); ?>
+<?php wp_head(); ?>
+	
 </head>
 
 <body <?php body_class(); ?>>
@@ -85,9 +85,11 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 					</div>
 				</div>
 			</nav><!-- #site-navigation -->
+			<h1>TRYING SOMTHING!!</h1>
 		</div>
-	</header><!-- #masthead -->
+	 </header><!-- #masthead -->
 	<div id="content" class="main-container">
+	
 		<?php if ( ! is_page_template( 'page-templates/template-home.php' ) && ! is_404() && ! is_page_template( 'page-templates/template-widget.php' ) ) : ?>
 			<div class="header-callout">
 				<?php shapely_top_callout(); ?>

@@ -212,7 +212,7 @@ function wpnw_howitwork_page() { ?>
 												</th>
 												<td>
 													<p><?php _e('Check plugin document for shortcode parameters and demo for designs.', 'sp-news-and-widget'); ?></p> <br/>
-													<a class="button button-primary" href="https://www.wponlinesupport.com/plugins-documentation/document-wp-news-and-scrolling-widgets/" target="_blank"><?php _e('Documentation', 'sp-news-and-widget'); ?></a>									
+													<a class="button button-primary" href="http://docs.wponlinesupport.com/wp-news-and-scrolling-widgets/" target="_blank"><?php _e('Documentation', 'sp-news-and-widget'); ?></a>									
 													<a class="button button-primary" href="http://demo.wponlinesupport.com/sp-news/" target="_blank"><?php _e('Demo for Designs', 'sp-news-and-widget'); ?></a>
 												</td>
 											</tr>

@@ -40,6 +40,7 @@
             background-color: #fff;
             border: 1px solid #eaeaea;
             transition: .2s border-color, .2s background-color, .2s color;
+            will-change: border-color, background-color, color;
         }
 
         &:not(.vp-pagination__item-active) > a:hover {
@@ -107,7 +108,7 @@ $weight: 2px !default;
         height: $size_inner;
         overflow: hidden;
         transform-origin: $size / 2 $size / 2;
-        animation: nk-spinner .4s infinite linear;
+        animation: vp-spinner .4s infinite linear;
 
         &::after {
             content: "";
@@ -120,7 +121,7 @@ $weight: 2px !default;
     }
 }
 
-@keyframes nk-spinner {
+@keyframes vp-spinner {
     100% {
         transform: rotate(360deg);
     }
