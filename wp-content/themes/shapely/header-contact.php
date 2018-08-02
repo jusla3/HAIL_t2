@@ -47,43 +47,43 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 	<!-------------------Testing PoUp JS-->
 
 	<?php wp_head(); ?>
-	<!---- POPUP FOR ---->
-		<header id="masthead" class="site-header<?php echo get_theme_mod( 'mobile_menu_on_desktop', false ) ? ' mobile-menu' : ''; ?>" role="banner">
-			<div class="nav-container">
-				<nav <?php echo $style; ?> id="site-navigation" class="main-navigation" role="navigation">
-					<div class="container nav-bar">
-						<div class="flex-row">
-							<div class="module left site-title-container">
-								<?php shapely_get_header_logo(); ?>
-							</div>
-							<div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-								<i class="fa fa-bars"></i>
-							</div>
-							<div class="module-group right">
-								<div class="module left">
-									<?php shapely_header_menu(); ?>
-								</div>
-								<!--end of menu module-->
-								<div class="module widget-handle search-widget-handle hidden-xs hidden-sm">
-									<div class="search">
-										<i class="fa fa-search"></i>
-										<span class="title"><?php esc_html_e( 'Site Search', 'shapely' ); ?></span>
-									</div>
-									<div class="function">
-										<?php
-										get_search_form();
-										?>
-									</div>
-								</div>
-							</div>
-							<!--end of module group-->
-						</div>
-					</div>
-				</nav><!-- #site-navigation -->
-			</div>
-		</header><!-- #masthead -->
-</head>
 
+</head>
+<!---- POPUP FOR ---->
+	<header id="masthead" class="site-header<?php echo get_theme_mod( 'mobile_menu_on_desktop', false ) ? ' mobile-menu' : ''; ?>" role="banner">
+		<div class="nav-container">
+			<nav <?php echo $style; ?> id="site-navigation" class="main-navigation" role="navigation">
+				<div class="container nav-bar">
+					<div class="flex-row">
+						<div class="module left site-title-container">
+							<?php shapely_get_header_logo(); ?>
+						</div>
+						<div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+							<i class="fa fa-bars"></i>
+						</div>
+						<div class="module-group right">
+							<div class="module left">
+								<?php shapely_header_menu(); ?>
+							</div>
+							<!--end of menu module-->
+							<div class="module widget-handle search-widget-handle hidden-xs hidden-sm">
+								<div class="search">
+									<i class="fa fa-search"></i>
+									<span class="title"><?php esc_html_e( 'Site Search', 'shapely' ); ?></span>
+								</div>
+								<div class="function">
+									<?php
+									get_search_form();
+									?>
+								</div>
+							</div>
+						</div>
+						<!--end of module group-->
+					</div>
+				</div>
+			</nav><!-- #site-navigation -->
+		</div>
+	</header><!-- #masthead -->
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'shapely' ); ?></a>
