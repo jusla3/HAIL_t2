@@ -50,7 +50,7 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 	
 </head>
 
-<body <?php body_class(); ?>>
+<?php body_class(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'shapely' ); ?></a>
 
@@ -68,41 +68,6 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 						<div class="module-group right">
 							<div class="module left">
 								<?php shapely_header_menu(); ?>
-
-
-	<?php wp_head(); ?>
-<<<<<<< HEAD
-	<!---- POPUP FOR ---->
-		<header id="masthead" class="site-header<?php echo get_theme_mod( 'mobile_menu_on_desktop', false ) ? ' mobile-menu' : ''; ?>" role="banner">
-			<div class="nav-container">
-				<nav <?php echo $style; ?> id="site-navigation" class="main-navigation" role="navigation">
-					<div class="container nav-bar">
-						<div class="flex-row">
-							<div class="module left site-title-container">
-								<?php shapely_get_header_logo(); ?>
-
-							</div>
-							<div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-								<i class="fa fa-bars"></i>
-=======
-
-</head>
-<!---- POPUP FOR ---->
-	<header id="masthead" class="site-header<?php echo get_theme_mod( 'mobile_menu_on_desktop', false ) ? ' mobile-menu' : ''; ?>" role="banner">
-		<div class="nav-container">
-			<nav <?php echo $style; ?> id="site-navigation" class="main-navigation" role="navigation">
-				<div class="container nav-bar">
-					<div class="flex-row">
-						<div class="module left site-title-container">
-							<?php shapely_get_header_logo(); ?>
-						</div>
-						<div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-							<i class="fa fa-bars"></i>
-						</div>
-						<div class="module-group right">
-							<div class="module left">
-								<?php shapely_header_menu(); ?>
->>>>>>> fbb25d94643846fb00a57d9aaa836fa80b462e38
 							</div>
 							<!--end of menu module-->
 							<div class="module widget-handle search-widget-handle hidden-xs hidden-sm">
@@ -119,37 +84,26 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 						</div>
 						<!--end of module group-->
 					</div>
-<<<<<<< HEAD
-
-				</div>
-			</nav><!-- #site-navigation -->
-			<h1>TRYING SOMTHING!!</h1>
-		</div>
-	 </header><!-- #masthead -->
-
-				</nav><!-- #site-navigation -->
-			</div>
-		</header><!-- #masthead -->
-</head>
-
-=======
 				</div>
 			</nav><!-- #site-navigation -->
 		</div>
+		<div id="darkBack"></div>
+  <div id="popUp">
+  <div id="close" class="close"><i class="fa fa-times"></i></div>
+    <div id="new"><span>Privacy policy</span></div>
+    <h2>I'm a notification popup that isn't too distracting or in your face. Scroll down or close me and I will go away. You'll still be able to open me later on don't worry.<p align="center" ><a > privacy statment</a></p></h2>
+    <form>
+      <div>
+        <input type="checkbox" id="privacyPolicy" name="policy" value="newsletter" onclick="myFunction3()">
+        <label  for="privacyPolicy">Please tick the box to agree to the terms and conditions?</label>
+        <p></p>
+        <blink id="warning" style="display:none;color:red;text-align:center;text-decoartion:blink;">Warning: You need to tick the box in order to procced.</blink>
+      </div>
+      <div id="notification-dropdown">    
+        <button id="button" class="btn btn-4 btn-4a icon-arrow-right" style="display:none">Continue</button>
+      </div>
+    </form>
+  </div>
+  <div id="plus"><span>NEW<br>&nbsp;&nbsp;<i class="fa fa-plus"></i></span></div>
 	</header><!-- #masthead -->
->>>>>>> fbb25d94643846fb00a57d9aaa836fa80b462e38
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'shapely' ); ?></a>
-
-
-	<div id="content" class="main-container">
 	
-		<?php if ( ! is_page_template( 'page-templates/template-home.php' ) && ! is_404() && ! is_page_template( 'page-templates/template-widget.php' ) ) : ?>
-			<div class="header-callout">
-				<?php shapely_top_callout(); ?>
-			</div>
-		<?php endif; ?>
-
-		<section class="content-area <?php echo ( get_theme_mod( 'top_callout', true ) ) ? '' : ' pt0 '; ?>">
-			<div id="main" class="<?php echo ( ! is_page_template( 'page-templates/template-home.php' ) && ! is_page_template( 'page-templates/template-widget.php' ) ) ? 'container' : ''; ?>" role="main">

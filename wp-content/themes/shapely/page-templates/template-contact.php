@@ -1,13 +1,22 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * Template Name: Laz's Contact_us Page
+ * * Description: Displays the Home page with Parallax effects.
  *
- * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link    https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Shapely
  */
+ 
 
-get_header(); ?>
+get_header('contact');?>
 <?php $layout_class = shapely_get_layout_class(); ?>
 	<div class="row">
 		<?php
@@ -29,7 +38,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-		</div>  
+		</div> <!-- #primary -->
 		<?php
 		if ( 'sidebar-right' == $layout_class ) :
 			get_sidebar();
