@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Laz's Contact_us Page
+ * Template Name: Laz's Contact_us Page 
  * * Description: Displays the contact us page with Parallax effects.
  *
- * The template for displaying all pages.
+ * The template for displaying all pages. !!
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
