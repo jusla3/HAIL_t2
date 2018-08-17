@@ -29,7 +29,7 @@ return false;
 };
 function myFunction0() {
 $("#plus").css("margin-left", "0px");
-console.log("LAZ window loaded");
+console.log("LAZ's window loaded");
 };
 
 function myFunction1() {

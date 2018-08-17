@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Laz's Contact_us Page
- * * Description: Displays the Home page with Parallax effects.
+ * * Description: Displays the contact us page with Parallax effects.
  *
  * The template for displaying all pages.
  *
