@@ -85,4 +85,4 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 		<?php endif; ?>
 
 		<section class="content-area <?php echo ( get_theme_mod( 'top_callout', true ) ) ? '' : ' pt0 '; ?>">
-			<div id="main" class="<?php echo ( ! is_page_template( 'page-templates/template-home.php' ) && ! is_page_template( 'page-templates/template-widget.php' ) ) ? 'container' : ''; ?>" role="main">
+			<div id="main" class="" role="main">

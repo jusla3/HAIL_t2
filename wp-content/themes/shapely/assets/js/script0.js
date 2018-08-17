@@ -27,6 +27,11 @@ var lable = document.getElementById("warning");
 }
 return false;
 };
+function myFunction0() {
+$("#plus").css("margin-left", "0px");
+console.log("LAZ window loaded");
+};
+
 function myFunction1() {
 		document.getElementById("textarea").addEventListener("click", callback, true);
 if (GG <1){

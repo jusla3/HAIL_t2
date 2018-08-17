@@ -33,7 +33,7 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
   <!---TESTING CUSTOME HEADER---->
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	
 	<!-------------------Testing PoUp css-->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -45,12 +45,11 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 	<script src="/wp-content/themes/shapely/assets/js/script0.js"></script>
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<!-------------------Testing PoUp JS-->
-
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
-	
 </head>
 
-<?php body_class(); ?>
+<body <?php body_class(); ?> onload="myFunction0()">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'shapely' ); ?></a>
 
@@ -87,23 +86,13 @@ if ( 1 == $shapely_transparent_header && $shapely_transparent_header_opacity ) {
 				</div>
 			</nav><!-- #site-navigation -->
 		</div>
-		<div id="darkBack"></div>
-  <div id="popUp">
-  <div id="close" class="close"><i class="fa fa-times"></i></div>
-    <div id="new"><span>Privacy policy</span></div>
-    <h2>I'm a notification popup that isn't too distracting or in your face. Scroll down or close me and I will go away. You'll still be able to open me later on don't worry.<p align="center" ><a > privacy statment</a></p></h2>
-    <form>
-      <div>
-        <input type="checkbox" id="privacyPolicy" name="policy" value="newsletter" onclick="myFunction3()">
-        <label  for="privacyPolicy">Please tick the box to agree to the terms and conditions?</label>
-        <p></p>
-        <blink id="warning" style="display:none;color:red;text-align:center;text-decoartion:blink;">Warning: You need to tick the box in order to procced.</blink>
-      </div>
-      <div id="notification-dropdown">    
-        <button id="button" class="btn btn-4 btn-4a icon-arrow-right" style="display:none">Continue</button>
-      </div>
-    </form>
-  </div>
-  <div id="plus"><span>NEW<br>&nbsp;&nbsp;<i class="fa fa-plus"></i></span></div>
 	</header><!-- #masthead -->
-	
+	<div id="content" class="main-container">
+		<?php if ( ! is_page_template( 'page-templates/template-home.php' ) && ! is_404() && ! is_page_template( 'page-templates/template-widget.php' ) ) : ?>
+			<div class="header-callout">
+				<?php shapely_top_callout(); ?>
+			</div>
+		<?php endif; ?>
+
+		<section class="content-area <?php echo ( get_theme_mod( 'top_callout', true ) ) ? '' : ' pt0 '; ?>">
+			<div id="main" class="<?php echo ( ! is_page_template( 'page-templates/template-home.php' ) && ! is_page_template( 'page-templates/template-widget.php' ) ) ? 'container' : ''; ?>" role="main">
