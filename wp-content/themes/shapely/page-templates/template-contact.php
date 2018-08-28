@@ -16,7 +16,7 @@
  */
  
 
-get_header('contact');?>
+get_header();?>
 <!-- ITS WORKING -->
 <?php $layout_class = shapely_get_layout_class(); ?>
 	<div class="row">

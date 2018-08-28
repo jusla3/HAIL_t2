@@ -1,6 +1,9 @@
 <?php
 /**
  * The header for our theme.
+  *  Name: Laz's Home Page PopUp 
+ *  Description: Displays the contact us POPUP effects, with acknowledgment of the terms and condition .
+ * @link    https://www.lazarodossantos.com
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
