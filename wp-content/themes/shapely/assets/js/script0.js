@@ -1,3 +1,4 @@
+
 var t = 0;
 
 var $pop = $('#popUp');
@@ -29,7 +30,7 @@ return false;
 };
 function myFunction0() {
 $("#plus").css("margin-left", "0px");
-console.log("LAZ's window loaded");
+console.log("LAZ's test window loaded");
 };
 
 function myFunction1() {

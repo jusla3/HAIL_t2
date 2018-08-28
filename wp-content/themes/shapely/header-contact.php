@@ -1,10 +1,8 @@
 <?php
-/**
- * The header for the contact us page.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
+/*
+ *  Name: Laz's Contact_us Page PopUp 
+ *  Description: Displays the contact us page POPUP effects, with acknowledgment of the terms and condition .
+ * @link    https://www.lazarodossantos.com
  *
  * @package Shapely
  */
