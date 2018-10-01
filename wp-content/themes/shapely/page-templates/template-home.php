@@ -7,7 +7,7 @@
  */
 ?>
 
-<?php get_header('home'); ?>
+<?php get_header('contact'); ?>
 <?php
 if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'sidebar-home' ) ) :
 ?>
